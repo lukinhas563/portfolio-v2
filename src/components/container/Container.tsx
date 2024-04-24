@@ -3,5 +3,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children }: ContainerProps) {
-  return <div>{children}</div>;
+  return <div className="p-10">{children}</div>;
 }
