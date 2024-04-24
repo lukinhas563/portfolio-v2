@@ -24,6 +24,7 @@ import IconGit from "./IconGit/IconGit";
 import IconWebpack from "./IconWebpack/IconWebpack";
 import IconYarn from "./IconYarn/IconYarn";
 import IconJest from "./IconJest/IconJest";
+import IconArrowUpRight from "./IconArrowUpRight/IconArrowUpRight";
 
 export interface IconsProps {
   width?: number;
@@ -109,5 +110,8 @@ export const icons = {
   ),
   jest: ({ width, color, className }: IconsProps) => (
     <IconJest width={width} color={color} className={className} />
+  ),
+  arrowupright: ({ width, color, className }: IconsProps) => (
+    <IconArrowUpRight width={width} color={color} className={className} />
   ),
 };

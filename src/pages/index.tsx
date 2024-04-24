@@ -3,6 +3,7 @@ import Container from "@/components/container/Container";
 import NavBar from "@/components/navBar/NavBar";
 import Header from "@/components/header/Header";
 import Slide from "@/components/slide/Slide";
+import Section from "@/components/section/Section";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,10 @@ export default function Home() {
       </Container>
 
       <Slide />
+
+      <Container>
+        <Section />
+      </Container>
     </>
   );
 }
