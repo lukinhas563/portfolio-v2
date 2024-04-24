@@ -14,15 +14,15 @@ export default function Header() {
         <div className="flex justify-between mt-3">
           <div className="flex gap-3">
             <Button>
-              <Icon name="github" width={20} />
+              <Icon name="github" color="#fff" width={20} />
             </Button>
             <Button>
-              <Icon name="linkedin" width={20} />
+              <Icon name="linkedin" color="#fff" width={20} />
             </Button>
           </div>
 
           <Button>
-            <Icon name="download" /> Download CV
+            <Icon name="download" color="#fff" /> Download CV
           </Button>
         </div>
       </div>
