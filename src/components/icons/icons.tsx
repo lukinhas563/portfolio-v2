@@ -25,6 +25,10 @@ import IconWebpack from "./IconWebpack/IconWebpack";
 import IconYarn from "./IconYarn/IconYarn";
 import IconJest from "./IconJest/IconJest";
 import IconArrowUpRight from "./IconArrowUpRight/IconArrowUpRight";
+import IconServer from "./IconServer/IconServer";
+import IconComputer from "./IconComputer/IconComputer";
+import IconArrowRight from "./IconArrowRight/IconArrowRight";
+import IconArrowLeft from "./IconArrowLeft/IconArrowLeft";
 
 export interface IconsProps {
   width?: number;
@@ -113,5 +117,17 @@ export const icons = {
   ),
   arrowupright: ({ width, color, className }: IconsProps) => (
     <IconArrowUpRight width={width} color={color} className={className} />
+  ),
+  server: ({ width, color, className }: IconsProps) => (
+    <IconServer width={width} color={color} className={className} />
+  ),
+  computer: ({ width, color, className }: IconsProps) => (
+    <IconComputer width={width} color={color} className={className} />
+  ),
+  arrowright: ({ width, color, className }: IconsProps) => (
+    <IconArrowRight width={width} color={color} className={className} />
+  ),
+  arrowleft: ({ width, color, className }: IconsProps) => (
+    <IconArrowLeft width={width} color={color} className={className} />
   ),
 };

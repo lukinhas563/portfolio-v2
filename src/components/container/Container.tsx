@@ -3,5 +3,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children }: ContainerProps) {
-  return <div className="p-10">{children}</div>;
+  return <div className="py-10 px-20">{children}</div>;
 }
