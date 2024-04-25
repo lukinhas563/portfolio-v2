@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../button/Button";
 import Card from "../card/Card";
 import Icon from "../icons/Icon";
@@ -7,18 +7,19 @@ export default function Section() {
   const [cards, setCards] = useState<NodeList | never[]>([]);
   const [currentCard, setCurrentCard] = useState(0);
 
+  useEffect(() => {
+    const cardsComponents = document.querySelectorAll(".card");
+
+    setCards(cardsComponents);
+  }, []);
+
   if (cards[currentCard]) {
     (cards[currentCard] as HTMLElement).scrollIntoView({
       inline: "start",
+      block: "nearest",
       behavior: "smooth",
     });
   }
-
-  useEffect(() => {
-    const documentCards = document.querySelectorAll(".card") as NodeList;
-
-    setCards(documentCards);
-  }, []);
 
   const handleRightClick = () => {
     if (currentCard > cards.length - 3) {
