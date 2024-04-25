@@ -37,6 +37,13 @@ export default function Section() {
     }
   };
 
+  const openInNewTab = (url: string) => {
+    const newWindow = window.open(url, "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  };
+
   return (
     <section className="flex flex-col gap-10 ">
       <h4 className="text-center text-3xl font-semibold my-4">
@@ -48,31 +55,41 @@ export default function Section() {
           iconName="server"
           title="API TYPESCRIPT"
           content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
-          onClick={() => console.log("oi")}
+          onClick={() =>
+            openInNewTab("https://github.com/lukinhas563/e-ficaz-api")
+          }
         />
         <Card
           iconName="computer"
           title="PORTFOLIO FRONT"
           content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
-          onClick={() => console.log("oi2")}
+          onClick={() =>
+            openInNewTab("https://github.com/lukinhas563/portfolio-v2")
+          }
         />
         <Card
           iconName="computer"
           title="BLOG STRAPI"
           content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
-          onClick={() => console.log("oi3")}
+          onClick={() =>
+            openInNewTab("https://github.com/lukinhas563/blog-strapi-test")
+          }
         />
         <Card
           iconName="computer"
           title="NOTAS FISCAIS"
           content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
-          onClick={() => console.log("oi4")}
+          onClick={() =>
+            openInNewTab("https://github.com/lukinhas563/xmlcalc2")
+          }
         />
         <Card
           iconName="computer"
           title="LANDING PAGE"
           content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
-          onClick={() => console.log("oi5")}
+          onClick={() =>
+            openInNewTab("https://github.com/lukinhas563/basic-landing-page")
+          }
         />
       </div>
 

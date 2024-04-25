@@ -1,7 +1,23 @@
+import { redirect } from "next/dist/server/api-utils";
 import Button from "../button/Button";
 import Icon from "../icons/Icon";
 
 export default function Header() {
+  const openInNewTab = (url: string) => {
+    const newWindow = window.open(url, "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  };
+
+  const downloadPdf = () => {
+    const aTag = document.createElement("a");
+    aTag.href = "/Lucas_Montenegro_Alves.pdf";
+    aTag.setAttribute("download", "Lucas_Montenegro_Alves.pdf");
+    aTag.click();
+    aTag.remove();
+  };
+
   return (
     <header className="flex gap-10 flex-col justify-center items-center | h-96">
       <div>
@@ -13,15 +29,21 @@ export default function Header() {
         {/* CONTAINER BUTTONS */}
         <div className="flex justify-between mt-3">
           <div className="flex gap-3">
-            <Button>
+            <Button
+              onClick={() => openInNewTab("https://github.com/lukinhas563")}
+            >
               <Icon name="github" color="#fff" width={20} />
             </Button>
-            <Button>
+            <Button
+              onClick={() =>
+                openInNewTab("https://linkedin.com/in/lucasmontenegro")
+              }
+            >
               <Icon name="linkedin" color="#fff" width={20} />
             </Button>
           </div>
 
-          <Button>
+          <Button onClick={() => downloadPdf()}>
             <Icon name="download" color="#fff" /> Download CV
           </Button>
         </div>
