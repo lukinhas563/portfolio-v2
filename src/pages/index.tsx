@@ -6,6 +6,7 @@ import Slide from "@/components/slide/Slide";
 import Section from "@/components/section/Section";
 import FormContainer from "@/components/formContainer/FormContainer";
 import Form from "@/components/form/Form";
+import Footer from "@/components/foot/Foot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Home() {
       <FormContainer>
         <Form />
       </FormContainer>
+      <Footer />
     </>
   );
 }
