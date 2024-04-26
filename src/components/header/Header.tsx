@@ -1,4 +1,3 @@
-import { redirect } from "next/dist/server/api-utils";
 import Button from "../button/Button";
 import Icon from "../icons/Icon";
 
@@ -19,7 +18,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex gap-10 flex-col justify-center items-center | h-96">
+    <header className="flex gap-10 flex-col justify-center items-center | h-96 | main-header">
       <div>
         {/* TITLE CONTENT */}
         <p>Hello world_</p>

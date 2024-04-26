@@ -93,7 +93,7 @@ export default function Form() {
       )}
 
       {/* NAME LINE CONTAINER */}
-      <div className=" flex gap-5">
+      <div className="flex gap-5 | container-name">
         <label className="w-full">
           <p className={classError}>{errors.name ? errors.name : ""}</p>
           <Input

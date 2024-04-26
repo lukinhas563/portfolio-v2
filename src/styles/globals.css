@@ -27,3 +27,21 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@media (max-width: 750px) {
+  .main-title {
+    display: none;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .container-name {
+    flex-direction: column;
+  }
+
+  .main-header {
+    margin: 50px 0;
+  }
+}

@@ -22,7 +22,7 @@ export default function Section() {
   }
 
   const handleRightClick = () => {
-    if (currentCard > cards.length - 3) {
+    if (currentCard > cards.length - 2) {
       setCurrentCard(0);
     } else {
       setCurrentCard(currentCard + 1);
@@ -31,7 +31,7 @@ export default function Section() {
 
   const handleLeftClick = () => {
     if (currentCard <= 0) {
-      setCurrentCard(cards.length - 2);
+      setCurrentCard(cards.length - 1);
     } else {
       setCurrentCard(currentCard - 1);
     }
