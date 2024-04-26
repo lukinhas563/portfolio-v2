@@ -9,7 +9,8 @@ export default function IconDownload({ width, color, className }: IconsProps) {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title />
+      <title>Download</title>
+      <desc>Icode de download</desc>
 
       <g id="Complete">
         <g id="download">

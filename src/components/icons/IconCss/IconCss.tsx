@@ -12,6 +12,9 @@ export default function IconCss({ className, color, width }: IconsProps) {
       viewBox="0 0 512 512"
       enableBackground="new 0 0 512 512"
     >
+      <title>CSS</title>
+      <desc>Icode de habilidade em CSS</desc>
+
       <g id="c133de6af664cd4f011a55de6b001b19">
         <path
           display="inline"

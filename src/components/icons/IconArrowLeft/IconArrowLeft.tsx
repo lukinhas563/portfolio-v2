@@ -10,6 +10,9 @@ export default function IconArrowLeft({ className, color, width }: IconsProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Seta para esquerda</title>
+      <desc>Icode de uma seta apontando para a esquerda</desc>
+
       <path
         d="M6 12H18M6 12L11 7M6 12L11 17"
         stroke={color}

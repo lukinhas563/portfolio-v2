@@ -10,6 +10,9 @@ export default function IconComputer({ width, className, color }: IconsProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Computador</title>
+      <desc>Icode de computador pessoal</desc>
+
       <path
         fillRule="evenodd"
         clipRule="evenodd"

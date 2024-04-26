@@ -10,6 +10,9 @@ export default function IconTailwind({ className, color, width }: IconsProps) {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Tailwind</title>
+      <desc>Icode de habilidade em Tailwind</desc>
+
       <path
         fillRule="evenodd"
         clipRule="evenodd"

@@ -26,7 +26,7 @@ export default function Header() {
         {/* TITLE CONTENT */}
         <p>Hello world_</p>
         <h2 className="text-5xl font-semibold max-w-80">Lucas Montenegro</h2>
-        <h3 className="font-thin">Desenvolvedor front-end</h3>
+        <h3 className="font-thin">Desenvolvedor full-stack</h3>
 
         {/* CONTAINER BUTTONS */}
         <div className="flex justify-between mt-3">
@@ -54,7 +54,7 @@ export default function Header() {
       {/* DESCRIPTION CONTENT */}
       <p className="max-w-[40rem] text-center">
         Empolgado com a tecnologia e sua capacidade de transformar experiências
-        digitais, sou um profissional em Desenvolvimento <b>Front-end</b>.
+        digitais, sou um profissional em Desenvolvimento <b>Full-stack</b>.
         Comprometido com a excelência, possuo habilidade em <b>React</b>,{" "}
         <b>Typescript</b>, <b>Next</b> e outras tecnologias relevantes.
       </p>

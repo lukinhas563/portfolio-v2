@@ -14,6 +14,11 @@ export default function IconArrowUpRight({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Seta para direita cima</title>
+      <desc>
+        Icode de seta apontando para a direita cima / diagonal direita
+      </desc>
+
       <path
         d="M7 17L17 7M17 7H8M17 7V16"
         stroke={color}

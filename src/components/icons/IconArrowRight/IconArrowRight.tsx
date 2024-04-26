@@ -14,6 +14,9 @@ export default function IconArrowRight({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Seta para direita</title>
+      <desc>Icode de uma seta apontando para a direita</desc>
+
       <path
         d="M6 12H18M18 12L13 7M18 12L13 17"
         stroke={color}

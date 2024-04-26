@@ -9,8 +9,8 @@ export default function IconHtml({ width, className, color }: IconsProps) {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>html</title>
-      <desc>Created with Sketch.</desc>
+      <title>HTML</title>
+      <desc>Icone de habilidade em HTML5</desc>
       <defs></defs>
       <g
         className={className}

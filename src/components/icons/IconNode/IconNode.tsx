@@ -10,6 +10,9 @@ export default function IconNode({ className, color, width }: IconsProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Node js</title>
+      <desc>Icode de habilidade em Node js</desc>
+
       <path
         fillRule="nonzero"
         clipRule="nonzero"

@@ -10,6 +10,9 @@ export default function IconServer({ className, color, width }: IconsProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Servidor</title>
+      <desc>Icode de servidor</desc>
+
       <path
         d="M7 7C7.55229 7 8 6.55229 8 6C8 5.44772 7.55229 5 7 5C6.44771 5 6 5.44772 6 6C6 6.55229 6.44771 7 7 7Z"
         fill={color}

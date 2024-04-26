@@ -10,6 +10,9 @@ export default function IconArrowUp({ className, color, width }: IconsProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Seta para cima</title>
+      <desc>Icode de uma seta apontando para cima</desc>
+
       <path
         d="M12 6V18M12 6L7 11M12 6L17 11"
         stroke={color}

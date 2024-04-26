@@ -13,8 +13,8 @@ export default function IconJavascript({
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>javascript [#155]</title>
-      <desc>Created with Sketch.</desc>
+      <title>Javascript</title>
+      <desc>Icode de habilidade em JavaScript</desc>
       <defs></defs>
       <g
         id="Page-1"

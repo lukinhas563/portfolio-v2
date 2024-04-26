@@ -10,6 +10,9 @@ export default function IconFigma({ className, color, width }: IconsProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Figma</title>
+      <desc>Icode de habilidade em Figma</desc>
+
       <path
         fillRule="evenodd"
         clipRule="evenodd"

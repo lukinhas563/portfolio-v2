@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../button/Button";
 import Card from "../card/Card";
 import Icon from "../icons/Icon";
@@ -54,7 +54,7 @@ export default function Section() {
         <Card
           iconName="server"
           title="API TYPESCRIPT"
-          content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
+          content="Uma API REST desenvolvida utilizando Typescript e Express com banco de dados MySQL."
           onClick={() =>
             openInNewTab("https://github.com/lukinhas563/e-ficaz-api")
           }
@@ -62,7 +62,7 @@ export default function Section() {
         <Card
           iconName="computer"
           title="PORTFOLIO FRONT"
-          content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
+          content="Portfolio desenvolvida em Next e Typescript permitindo alta-perfomace."
           onClick={() =>
             openInNewTab("https://github.com/lukinhas563/portfolio-v2")
           }
@@ -70,7 +70,7 @@ export default function Section() {
         <Card
           iconName="computer"
           title="BLOG STRAPI"
-          content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
+          content="Blog desenvolvida em Next utilizando a tecnologia Strap como back-end."
           onClick={() =>
             openInNewTab("https://github.com/lukinhas563/blog-strapi-test")
           }
@@ -78,7 +78,7 @@ export default function Section() {
         <Card
           iconName="computer"
           title="NOTAS FISCAIS"
-          content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
+          content="Calculadora de notas fiscais eletrônicas desenvolvida em React com conceitos do SOLID."
           onClick={() =>
             openInNewTab("https://github.com/lukinhas563/xmlcalc2")
           }
@@ -86,7 +86,7 @@ export default function Section() {
         <Card
           iconName="computer"
           title="LANDING PAGE"
-          content="Lorem ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren"
+          content="Landing Page utlizando apenas HTML e CSS. Foi desenvolvida com o objetivo de entender os fundamentos básicos."
           onClick={() =>
             openInNewTab("https://github.com/lukinhas563/basic-landing-page")
           }
