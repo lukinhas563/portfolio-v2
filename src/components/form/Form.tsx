@@ -1,8 +1,8 @@
 import { FormEvent, useState } from "react";
 import { formValidade } from "@/services/validade";
+import { emailService } from "@/services/emailService";
 import Button from "../button/Button";
 import Input from "../input/Input";
-import emailjs from "@emailjs/browser";
 
 interface FormValidationError {
   name?: string;
@@ -42,35 +42,25 @@ export default function Form() {
       return;
     }
 
-    const templateParams = {
-      from_name: name,
-      from_lastname: lastName,
-      from_email: email,
-      from_company: company,
-      message: message,
-    };
+    const response = await emailService(
+      name,
+      lastName,
+      email,
+      company,
+      message
+    );
 
-    await emailjs
-      .send(
-        "service_zp1xhny",
-        "template_xbqnznw",
-        templateParams,
-        "mgaqTfNRE2UGAteAD"
-      )
-      .then(
-        (response) => {
-          clear();
-          setSucess("Mensagem enviada com sucesso!");
-        },
-        (error) => {
-          setFailure("Erro ao enviar a mensagem");
-        }
-      );
+    if (response.result) {
+      clear();
+      setSucess("Mensagem enviada com sucesso!");
+      return;
+    } else {
+      setFailure("Erro ao enviar a mensagem");
+      return;
+    }
   };
 
-  const clear = (e?: MouseEvent) => {
-    if (e) e.preventDefault();
-
+  const clear = () => {
     setErrors({});
 
     setName("");
