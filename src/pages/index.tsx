@@ -1,3 +1,5 @@
+import "../services/translations";
+
 import { Inter } from "next/font/google";
 import Container from "@/components/container/Container";
 import NavBar from "@/components/navBar/NavBar";

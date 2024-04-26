@@ -1,6 +1,16 @@
 import { FormEvent, useState } from "react";
+import { formValidade } from "@/services/validade";
 import Button from "../button/Button";
 import Input from "../input/Input";
+import emailjs from "@emailjs/browser";
+
+interface FormValidationError {
+  name?: string;
+  lastName?: string;
+  email?: string;
+  company?: string;
+  message?: string;
+}
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -8,65 +18,164 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState<FormValidationError>({});
 
-  const formSubmit = (e: FormEvent) => {
+  const [sucess, setSucess] = useState("");
+  const [failure, setFailure] = useState("");
+
+  const classError = "text-red-600 text-sm py-1";
+
+  const formSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log(name, lastName, email, company, message);
+
+    const result = await formValidade({
+      name,
+      lastName,
+      email,
+      company,
+      message,
+    });
+
+    if (result.result === false) {
+      setSucess("");
+      setErrors(result.content);
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      from_lastname: lastName,
+      from_email: email,
+      from_company: company,
+      message: message,
+    };
+
+    await emailjs
+      .send(
+        "service_zp1xhny",
+        "template_xbqnznw",
+        templateParams,
+        "mgaqTfNRE2UGAteAD"
+      )
+      .then(
+        (response) => {
+          clear();
+          setSucess("Mensagem enviada com sucesso!");
+        },
+        (error) => {
+          setFailure("Erro ao enviar a mensagem");
+        }
+      );
   };
+
+  const clear = (e?: MouseEvent) => {
+    if (e) e.preventDefault();
+
+    setErrors({});
+
+    setName("");
+    setLastName("");
+    setEmail("");
+    setCompany("");
+    setMessage("");
+  };
+
   return (
-    <form
-      onSubmit={(e) => formSubmit(e)}
-      className="flex flex-col gap-5 w-4/6 "
-    >
+    <form onSubmit={(e) => formSubmit(e)} className="flex flex-col gap-5">
       <h5 className="text-center text-3xl font-semibold my-5">
         Entre em contato
       </h5>
 
+      {sucess ? (
+        <div className="bg-green-700 |  h-10 rounded | flex justify-center items-center">
+          <p>{sucess}</p>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {failure ? (
+        <div className="bg-red-500 |  h-10 rounded | flex justify-center items-center">
+          <p>{failure}</p>
+        </div>
+      ) : (
+        ""
+      )}
+
       {/* NAME LINE CONTAINER */}
       <div className=" flex gap-5">
-        <Input
-          type="text"
-          name="firstName"
-          placeholder="Nome"
-          value={name}
-          setValue={setName}
-        />
-        <Input
-          type="text"
-          name="lastName"
-          placeholder="Sobrenome"
-          value={lastName}
-          setValue={setLastName}
-        />
+        <label className="w-full">
+          <p className={classError}>{errors.name ? errors.name : ""}</p>
+          <Input
+            type="text"
+            name="firstName"
+            placeholder="Nome"
+            value={name}
+            setValue={setName}
+          />
+        </label>
+        <label className="w-full">
+          <p className={classError}>{errors.lastName ? errors.lastName : ""}</p>
+          <Input
+            type="text"
+            name="lastName"
+            placeholder="Sobrenome"
+            value={lastName}
+            setValue={setLastName}
+          />
+        </label>
       </div>
 
       {/* INFO ROWS */}
-      <Input
-        type="email"
-        name="email"
-        placeholder="Seu email"
-        value={email}
-        setValue={setEmail}
-      />
-      <Input
-        type="text"
-        name="company"
-        placeholder="Empresa"
-        value={company}
-        setValue={setCompany}
-      />
-      <Input
-        type="textarea"
-        name="message"
-        placeholder="Digite a sua mensagem..."
-        className="h-40"
-        value={message}
-        setValue={setMessage}
-      />
+      <label>
+        <p className={classError}>{errors.email ? errors.email : ""}</p>
+        <Input
+          type="email"
+          name="email"
+          placeholder="Seu email"
+          value={email}
+          setValue={setEmail}
+        />
+      </label>
+      <label>
+        <p className={classError}>{errors.company ? errors.company : ""}</p>
+        <Input
+          type="text"
+          name="company"
+          placeholder="Empresa"
+          value={company}
+          setValue={setCompany}
+        />
+      </label>
+      <label>
+        <p className={classError}>{errors.message ? errors.message : ""}</p>
+        <Input
+          type="textarea"
+          name="message"
+          placeholder="Digite a sua mensagem..."
+          className="h-40"
+          value={message}
+          setValue={setMessage}
+        />
+        <span>
+          <b
+            className={
+              message.length >= 1000
+                ? "text-red-500 font-normal"
+                : "font-normal"
+            }
+          >
+            {message.length}
+          </b>
+          /1.000
+        </span>
+      </label>
 
       {/* BUTTON CONTAINER */}
       <div className="flex justify-center gap-10">
-        <button>Cancelar</button>
+        <button type="reset" onClick={() => clear()}>
+          Cancelar
+        </button>
         <Button type="submit">Enviar</Button>
       </div>
     </form>
