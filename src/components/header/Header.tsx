@@ -18,7 +18,10 @@ export default function Header() {
   };
 
   return (
-    <header className="flex gap-10 flex-col justify-center items-center | h-96 | main-header">
+    <header
+      className="flex gap-10 flex-col justify-center items-center | h-96 | main-header"
+      id="header"
+    >
       <div>
         {/* TITLE CONTENT */}
         <p>Hello world_</p>

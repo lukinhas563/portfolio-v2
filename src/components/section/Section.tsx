@@ -45,7 +45,7 @@ export default function Section() {
   };
 
   return (
-    <section className="flex flex-col gap-10 ">
+    <section className="flex flex-col gap-10" id="projects">
       <h4 className="text-center text-3xl font-semibold my-4">
         Conheça meus projetos
       </h4>

@@ -29,6 +29,7 @@ import IconServer from "./IconServer/IconServer";
 import IconComputer from "./IconComputer/IconComputer";
 import IconArrowRight from "./IconArrowRight/IconArrowRight";
 import IconArrowLeft from "./IconArrowLeft/IconArrowLeft";
+import IconArrowUp from "./IconArrowUp/IconArrowUp";
 
 export interface IconsProps {
   width?: number;
@@ -129,5 +130,8 @@ export const icons = {
   ),
   arrowleft: ({ width, color, className }: IconsProps) => (
     <IconArrowLeft width={width} color={color} className={className} />
+  ),
+  arrowup: ({ width, color, className }: IconsProps) => (
+    <IconArrowUp width={width} color={color} className={className} />
   ),
 };

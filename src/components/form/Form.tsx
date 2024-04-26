@@ -71,7 +71,11 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={(e) => formSubmit(e)} className="flex flex-col gap-5">
+    <form
+      onSubmit={(e) => formSubmit(e)}
+      className="flex flex-col gap-5"
+      id="contact"
+    >
       <h5 className="text-center text-3xl font-semibold my-5">
         Entre em contato
       </h5>

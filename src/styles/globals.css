@@ -14,6 +14,10 @@
   --button-background: #060606;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--font-color);
 

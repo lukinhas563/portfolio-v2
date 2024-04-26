@@ -5,7 +5,10 @@ export default function Slide() {
   const width = 50;
 
   return (
-    <div className="bg-[#1A1A1A] border-y-2 border-[#3C3C3C] p-10 flex overflow-hidden gap-6">
+    <div
+      className="bg-[#1A1A1A] border-y-2 border-[#3C3C3C] p-10 flex overflow-hidden gap-6"
+      id="skills"
+    >
       <div className="flex items-center gap-6 animate-infinite-scroll">
         <Icon name="javascript" width={width} className={className} />
         <Icon name="react" width={width} className={className} />
