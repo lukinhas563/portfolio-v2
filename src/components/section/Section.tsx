@@ -1,40 +1,44 @@
-import { useEffect, useState } from "react";
-import Button from "../button/Button";
 import Card from "../card/Card";
-import Icon from "../icons/Icon";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export default function Section() {
-  const [cards, setCards] = useState<NodeList | never[]>([]);
-  const [currentCard, setCurrentCard] = useState(0);
-
-  useEffect(() => {
-    const cardsComponents = document.querySelectorAll(".card");
-
-    setCards(cardsComponents);
-  }, []);
-
-  if (cards[currentCard]) {
-    (cards[currentCard] as HTMLElement).scrollIntoView({
-      inline: "start",
-      block: "nearest",
-      behavior: "smooth",
-    });
-  }
-
-  const handleRightClick = () => {
-    if (currentCard > cards.length - 2) {
-      setCurrentCard(0);
-    } else {
-      setCurrentCard(currentCard + 1);
-    }
-  };
-
-  const handleLeftClick = () => {
-    if (currentCard <= 0) {
-      setCurrentCard(cards.length - 1);
-    } else {
-      setCurrentCard(currentCard - 1);
-    }
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 6,
+      partialVisibilityGutter: 10,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1300 },
+      items: 5,
+      partialVisibilityGutter: 10,
+    },
+    tablet: {
+      breakpoint: { max: 1300, min: 1034 },
+      items: 4,
+      partialVisibilityGutter: 10,
+    },
+    smallTablet: {
+      breakpoint: { max: 1034, min: 840 },
+      items: 3,
+      partialVisibilityGutter: 10,
+    },
+    largeMobile: {
+      breakpoint: { max: 840, min: 630 },
+      items: 2,
+      partialVisibilityGutter: 30,
+    },
+    mobile: {
+      breakpoint: { max: 630, min: 344 },
+      items: 1,
+      partialVisibilityGutter: 30,
+    },
+    smallMobile: {
+      breakpoint: { max: 344, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 10,
+    },
   };
 
   const openInNewTab = (url: string) => {
@@ -45,12 +49,26 @@ export default function Section() {
   };
 
   return (
-    <section className="flex flex-col gap-10" id="projects">
+    <section className="flex flex-col gap-10 px-10 py-10" id="projects">
       <h4 className="text-center text-3xl font-semibold my-4">
         Conheça meus projetos
       </h4>
+
       {/* SLIDE CONTAINER */}
-      <div className="flex flex-row gap-10 overflow-x-auto no-scrollbar">
+      <Carousel
+        className="custom-carousel"
+        ssr={true}
+        responsive={responsive}
+        partialVisbile={true}
+        keyBoardControl={true}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+      >
+        <Card
+          iconName="server"
+          title="MICRO SERVIÇOS HQ"
+          content="Back-end C# em arquitetura de micro-serviços com Docker compose e PostgreSQL."
+          onClick={() => openInNewTab("https://github.com/lukinhas563/Lidas")}
+        />
         <Card
           iconName="server"
           title="API TYPESCRIPT"
@@ -91,17 +109,7 @@ export default function Section() {
             openInNewTab("https://github.com/lukinhas563/basic-landing-page")
           }
         />
-      </div>
-
-      {/* BUTTON CONTAINER */}
-      <div className="flex flex-row gap-3 justify-end">
-        <Button onClick={() => handleLeftClick()}>
-          <Icon name="arrowleft" color="#fff" />
-        </Button>
-        <Button onClick={() => handleRightClick()}>
-          <Icon name="arrowright" color="#fff" />
-        </Button>
-      </div>
+      </Carousel>
     </section>
   );
 }

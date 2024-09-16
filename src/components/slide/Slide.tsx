@@ -1,6 +1,17 @@
+import { useState } from "react";
 import Icon from "../icons/Icon";
 
 export default function Slide() {
+  const [isPaused, setIsPaused] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
+
   const className = "fill-[#333333] hover:fill-white min-w-[50px]";
   const width = 50;
 
@@ -8,8 +19,14 @@ export default function Slide() {
     <div
       className="bg-[#1A1A1A] border-y-2 border-[#3C3C3C] p-10 flex overflow-hidden gap-6"
       id="skills"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="flex items-center gap-6 animate-infinite-scroll">
+      <div
+        className={`flex items-center gap-6 animate-infinite-scroll ${
+          isPaused ? "paused" : ""
+        }`}
+      >
         <Icon name="javascript" width={width} className={className} />
         <Icon name="react" width={width} className={className} />
         <Icon name="typescript" width={width} className={className} />
@@ -32,8 +49,21 @@ export default function Slide() {
         <Icon name="webpack" width={width} className={className} />
         <Icon name="yarn" width={width} className={className} />
         <Icon name="jest" width={width} className={className} />
+        <Icon name="csharp" width={width} className={className} />
+        <Icon name="java" width={width} className={className} />
+        <Icon name="dotnet" width={width} className={className} />
+        <Icon name="python" width={width} className={className} />
+        <Icon name="angular" width={width} className={className} />
+        <Icon name="spring" width={width} className={className} />
+        <Icon name="rabbitmq" width={width} className={className} />
+        <Icon name="aws" width={width} className={className} />
+        <Icon name="azure" width={width} className={className} />
       </div>
-      <div className="flex items-center gap-6 animate-infinite-scroll">
+      <div
+        className={`flex items-center gap-6 animate-infinite-scroll ${
+          isPaused ? "paused" : ""
+        }`}
+      >
         <Icon name="javascript" width={width} className={className} />
         <Icon name="react" width={width} className={className} />
         <Icon name="typescript" width={width} className={className} />
@@ -56,6 +86,15 @@ export default function Slide() {
         <Icon name="webpack" width={width} className={className} />
         <Icon name="yarn" width={width} className={className} />
         <Icon name="jest" width={width} className={className} />
+        <Icon name="csharp" width={width} className={className} />
+        <Icon name="java" width={width} className={className} />
+        <Icon name="dotnet" width={width} className={className} />
+        <Icon name="python" width={width} className={className} />
+        <Icon name="angular" width={width} className={className} />
+        <Icon name="spring" width={width} className={className} />
+        <Icon name="rabbitmq" width={width} className={className} />
+        <Icon name="aws" width={width} className={className} />
+        <Icon name="azure" width={width} className={className} />
       </div>
     </div>
   );

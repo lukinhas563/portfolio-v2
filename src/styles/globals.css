@@ -32,6 +32,10 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+.paused {
+  animation-play-state: paused;
+}
+
 @media (max-width: 750px) {
   .main-title {
     display: none;

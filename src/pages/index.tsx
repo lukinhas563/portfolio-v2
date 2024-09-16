@@ -22,19 +22,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lucas Montenegro | Desenvolvedor full-stack</title>
+        <title>Lucas Montenegro | Desenvolvedor Back-end</title>
         <meta
           name="keywords"
-          content="Desenvolvedor, web, back-end, full-stack, fron-end, React, Next, Lucas Montenegro"
+          content="Desenvolvedor, web, back-end, full-stack, front-end, React, Next, Lucas Montenegro, C#, Java, JavaScript, .NET, Python, CSharp, DotNet"
         />
         <meta
           name="description"
-          content="Portfolio Desenvolvedor Full-stack de Lucas Montenegro Alves.Entre em contato com o e-mail lucasmontenegro475@gmail.com"
+          content="Portfolio Desenvolvedor Back-end de Lucas Montenegro Alves. Entre em contato com o e-mail lucasmontenegro475@gmail.com"
         />
         <meta name="author" content="Lucas Montenegro Alves"></meta>
       </Head>
       <Button
-        className="fixed bottom-10 right-10"
+        className="fixed bottom-10 right-10 z-50"
         onClick={() => router.push("#nav-bar")}
       >
         <Icon name="arrowup" color="#fff" />
@@ -47,9 +47,7 @@ export default function Home() {
 
       <Slide />
 
-      <Container>
-        <Section />
-      </Container>
+      <Section />
 
       <FormContainer>
         <Form />

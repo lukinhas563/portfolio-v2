@@ -30,6 +30,15 @@ import IconComputer from "./IconComputer/IconComputer";
 import IconArrowRight from "./IconArrowRight/IconArrowRight";
 import IconArrowLeft from "./IconArrowLeft/IconArrowLeft";
 import IconArrowUp from "./IconArrowUp/IconArrowUp";
+import IconCSharp from "./IconCSharp/IconCSharp";
+import IconJava from "./IconJava/IconJava";
+import IconDotNet from "./IconDotNet/IconDotNet";
+import IconPython from "./IconPython/IconPython";
+import IconAngular from "./IconAngular/IconAngular";
+import IconSpring from "./IconSpring/IconSpring";
+import IconRabbitMQ from "./IconRabbitMQ/IconRabbitMQ";
+import IconAWS from "./IconAWS/IconAWS";
+import IconAzure from "./IconAzure/IconAzure";
 
 export interface IconsProps {
   width?: number;
@@ -133,5 +142,32 @@ export const icons = {
   ),
   arrowup: ({ width, color, className }: IconsProps) => (
     <IconArrowUp width={width} color={color} className={className} />
+  ),
+  csharp: ({ width, color, className }: IconsProps) => (
+    <IconCSharp width={width} color={color} className={className} />
+  ),
+  java: ({ width, color, className }: IconsProps) => (
+    <IconJava width={width} color={color} className={className} />
+  ),
+  dotnet: ({ width, color, className }: IconsProps) => (
+    <IconDotNet width={width} color={color} className={className} />
+  ),
+  python: ({ width, color, className }: IconsProps) => (
+    <IconPython width={width} color={color} className={className} />
+  ),
+  angular: ({ width, color, className }: IconsProps) => (
+    <IconAngular width={width} color={color} className={className} />
+  ),
+  spring: ({ width, color, className }: IconsProps) => (
+    <IconSpring width={width} color={color} className={className} />
+  ),
+  rabbitmq: ({ width, color, className }: IconsProps) => (
+    <IconRabbitMQ width={width} color={color} className={className} />
+  ),
+  aws: ({ width, color, className }: IconsProps) => (
+    <IconAWS width={width} color={color} className={className} />
+  ),
+  azure: ({ width, color, className }: IconsProps) => (
+    <IconAzure width={width} color={color} className={className} />
   ),
 };
