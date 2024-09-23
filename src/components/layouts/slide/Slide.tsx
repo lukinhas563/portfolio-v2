@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Icon from "../../icons/Icon";
 import styles from "./slide.module.css";
+import { icons as allIcons } from "@/components/icons/icons";
 
 interface SlideProps {
   direction?: "left" | "right";
@@ -23,7 +24,7 @@ export default function Slide({ direction = "left" }: SlideProps) {
       : "animate-infinite-scroll-reverse";
   const width = 50;
 
-  const icons = [
+  const icons: (keyof typeof allIcons)[] = [
     "javascript",
     "react",
     "typescript",
