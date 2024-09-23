@@ -1,0 +1,9 @@
+.option {
+  color: rgba(255, 230, 230, 0.3);
+
+  transition: color ease-in-out 100ms;
+}
+
+.option:hover {
+  color: white;
+}

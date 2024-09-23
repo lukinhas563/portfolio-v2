@@ -4,7 +4,7 @@ import Email from "@/components/common/email/Email";
 
 export default function Contact() {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="contact">
       <div className="absolute bg-[#2D235C] h-[50rem] w-[50rem] left-[-30rem] top-[-20rem] rounded-full blur-3xl" />
       <Icon
         name="light"

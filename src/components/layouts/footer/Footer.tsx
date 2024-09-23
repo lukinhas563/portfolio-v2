@@ -1,5 +1,5 @@
 import Logo from "@/components/common/logo/Logo";
-import Menu from "../menu/Menu";
+import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
@@ -7,10 +7,26 @@ export default function Footer() {
       <p>Criado com ♥️ por</p>
       <Logo />
       <ul className="flex flex-row gap-4 mt-4">
-        <li>Inicio</li>
-        <li>Sobre</li>
-        <li>Projetos</li>
-        <li>Contato</li>
+        <li>
+          <a href="#menu" className={styles.option}>
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="#about" className={styles.option}>
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a href="#projects" className={styles.option}>
+            Projetos
+          </a>
+        </li>
+        <li>
+          <a href="#contact" className={styles.option}>
+            Contato
+          </a>
+        </li>
       </ul>
     </footer>
   );

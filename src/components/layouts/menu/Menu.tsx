@@ -3,14 +3,30 @@ import styles from "./menu.module.css";
 
 export default function Menu() {
   return (
-    <nav className={styles.menu}>
+    <nav className={styles.menu} id="menu">
       <Logo />
 
       <ul className={styles.options}>
-        <li>Inicio</li>
-        <li>Sobre</li>
-        <li>Projetos</li>
-        <li>Contato</li>
+        <li>
+          <a className={styles.option} href="#header">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a className={styles.option} href="#about">
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a className={styles.option} href="#projects">
+            Projetos
+          </a>
+        </li>
+        <li>
+          <a className={styles.option} href="#contact">
+            Contato
+          </a>
+        </li>
       </ul>
 
       <div className={styles.doggle}>OI</div>
