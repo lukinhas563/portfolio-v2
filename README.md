@@ -1,24 +1,48 @@
-# 💻 Sobre o projeto
+![Banner](/public/images/banner.png "Banner Portfólio Back-end")
 
-Portifolio full-stack desenvolvido em [Next.js](https://nextjs.org/) com o comando [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este projeto apresenta uma atualização do meu portfólio pessoal, criado para destacar meus projetos como desenvolvedor back-end, utilizando uma interface visualmente atrativa, moderna e responsiva.
 
-Hospedado na Vercel em [lucasmontenegro.vercel.app](https://lucasmontenegro.vercel.app/).
+## 👋 Descrição
+
+A proposta deste portfólio é oferecer uma experiência agradável para os visitantes, exibindo meus projetos de forma organizada e fácil de navegar. Além de ser uma vitrine dos meus trabalhos, o foco foi criar uma interface com usabilidade intuitiva e um design responsivo, garantindo a acessibilidade em qualquer dispositivo.
+
+## ✨ Funcionalidades
+
+- Exibição de projetos com descrições detalhadas e tecnologias utilizadas
+- Animações suaves para transições entre seções
+- Integração com formulários de contato, permitindo comunicação direta
+- Layout 100% responsivo, adaptado para diferentes tamanhos de tela
+- Performance otimizada com carregamento rápido
 
 ## ⚙️ Inicío
 
-Para iniciar, basta seguir os comandos:
+Siga os passos abaixo para rodar o projeto localmente:
 
-```
-# Para instalar as dependência.
+1. Clone o repositório:
 
-$ npm install | pnpm install | yarn install
-
-# Iniciar a aplicação.
-
-$ npm run dev | pnpm dev | yarn dev
+```bash
+git clone https://github.com/seu-usuario/portfolio-interface.git
 ```
 
-O servidor é aberto na porta 3000.
+2. Navegue até o diretório do projeto:
+
+```bash
+cd portfolio-interface
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+O servidor é aberto na porta **3000**.
 
 ## 🛠️ Tecnologias
 
@@ -30,10 +54,27 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Yup
 - Eslint
 
-## 🖼️ Modelo web
+## 🎉 Deploy
 
-![alt text](/public/fullpage.png)
+O projeto está disponível online e pode ser acessado através do link abaixo:
 
-## 📱 Modelo mobile
+[lucasmontenegro.vercel.app](https://lucasmontenegro.vercel.app/)
 
-![alt text](/public/mobilefull.png)
+## 🖼️ Capturas de Tela
+
+Interface principal do portfólio
+
+![Principal](/public/images/desktop.png)
+![Interface](/public/images/desktopFull.png)
+
+Comparação do antes e do depois
+
+![Comparação](/public/images/comparison.png)
+
+Interface completa
+
+![Comparação](/public/images/fullInterface.png)
+
+## ⚖️ Licença
+
+Este projeto está sob a licença MIT. Sinta-se livre para utilizar e modificar conforme necessário.
