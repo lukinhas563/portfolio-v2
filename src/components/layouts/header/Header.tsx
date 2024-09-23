@@ -12,10 +12,15 @@ export default function Header() {
 
   const downloadPdf = () => {
     const aTag = document.createElement("a");
-    aTag.href = "/Lucas Montenegro - Desenvolvedor Back End.pdf";
+    aTag.href = "documents/Lucas Montenegro - Desenvolvedor Back End.pdf";
     aTag.setAttribute("download", "Lucas_Montenegro_Alves.pdf");
     aTag.click();
     aTag.remove();
+  };
+
+  const socials = {
+    gitHub: "https://github.com/lukinhas563",
+    linkdIn: "https://www.linkedin.com/in/lucasmontenegro",
   };
 
   return (
@@ -47,10 +52,14 @@ export default function Header() {
 
         <div className={styles.action}>
           <div className={styles.links}>
-            <Icon name="github" width={30} />
-            <Icon name="linkedin" width={30} />
+            <button onClick={() => openInNewTab(socials.gitHub)}>
+              <Icon name="github" width={30} />
+            </button>
+            <button onClick={() => openInNewTab(socials.linkdIn)}>
+              <Icon name="linkedin" width={30} />
+            </button>
           </div>
-          <Button>Baixar CV</Button>
+          <Button onClick={() => downloadPdf()}>Baixar CV</Button>
         </div>
       </div>
     </header>
