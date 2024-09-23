@@ -9,6 +9,7 @@ import Slide from "@/components/layouts/slide/Slide";
 import About from "@/components/layouts/about/About";
 import Projects from "@/components/layouts/projects/Projects";
 import Contact from "@/components/layouts/contact/Contact";
+import Footer from "@/components/layouts/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function Home() {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </Container>
     </>
   );
