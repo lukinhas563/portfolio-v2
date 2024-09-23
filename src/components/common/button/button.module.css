@@ -1,0 +1,24 @@
+.wrapper {
+  border: 1px solid white;
+  border-radius: 50px;
+
+  display: inline-block;
+  transform: rotate(3deg);
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  padding: 5px 30px;
+  border-radius: 50px;
+
+  font-weight: lighter;
+  color: black;
+
+  transform: rotate(-3deg);
+  background: linear-gradient(90deg, #dea0ee, #fff5b6);
+}

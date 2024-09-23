@@ -1,3 +1,5 @@
+import styles from "./button.module.css";
+
 interface ButtonProps {
   className?: string;
   children?: React.ReactNode;
@@ -12,12 +14,10 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={`bg-[#060606] | px-3 py-2 rounded flex justify-center items-center gap-3 ${className}`}
-    >
-      {children}
-    </button>
+    <div className={styles.wrapper}>
+      <button type={type} onClick={onClick} className={styles.button}>
+        {children}
+      </button>
+    </div>
   );
 }

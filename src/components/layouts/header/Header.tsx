@@ -50,7 +50,7 @@ export default function Header() {
             <Icon name="github" width={30} />
             <Icon name="linkedin" width={30} />
           </div>
-          <Button>BAIXAR</Button>
+          <Button>Baixar CV</Button>
         </div>
       </div>
     </header>
