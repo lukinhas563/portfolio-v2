@@ -42,6 +42,7 @@ import IconAzure from "./IconAzure/IconAzure";
 import IconStar from "./IconStar/IconStar";
 import IconShootingStar from "./IconShootingStart/IconShotingStar";
 import IconLight from "./IconLight/IconLight";
+import IconHalfArrowUp from "./IconHalfArrowUp/IconHalfArrowUp";
 
 export interface IconsProps {
   width?: number;
@@ -181,5 +182,8 @@ export const icons = {
   ),
   light: ({ width, color, className }: IconsProps) => (
     <IconLight width={width} color={color} className={className} />
+  ),
+  halfarrowup: ({ width, color, className }: IconsProps) => (
+    <IconHalfArrowUp width={width} color={color} className={className} />
   ),
 };
