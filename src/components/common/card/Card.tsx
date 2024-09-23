@@ -1,5 +1,5 @@
-import Icon from "../icons/Icon";
-import { icons } from "../icons/icons";
+import Icon from "@/components/icons/Icon";
+import { icons } from "@/components/icons/icons";
 
 interface CardProps {
   iconName: keyof typeof icons;

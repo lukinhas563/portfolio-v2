@@ -1,4 +1,4 @@
-import Card from "../card/Card";
+import Card from "@/components/common/card/Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 

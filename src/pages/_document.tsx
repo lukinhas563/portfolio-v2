@@ -1,4 +1,4 @@
-import Analytics from "@/components/analytics/analytics";
+import Analytics from "@/components/common/analytics/analytics";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {

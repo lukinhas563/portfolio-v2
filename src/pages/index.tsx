@@ -2,17 +2,17 @@ import "../services/translations";
 
 import { useRouter } from "next/router";
 import { Inter } from "next/font/google";
-import Container from "@/components/container/Container";
-import NavBar from "@/components/navBar/NavBar";
-import Header from "@/components/header/Header";
-import Slide from "@/components/slide/Slide";
-import Section from "@/components/section/Section";
-import FormContainer from "@/components/formContainer/FormContainer";
-import Form from "@/components/form/Form";
-import Footer from "@/components/foot/Foot";
-import Button from "@/components/button/Button";
+import Container from "@/components/common/container/Container";
+import NavBar from "@/components/layouts/navBar/NavBar";
+import Header from "@/components/layouts/header/Header";
+import Slide from "@/components/layouts/slide/Slide";
+import Section from "@/components/layouts/section/Section";
+import FormContainer from "@/components/common/formContainer/FormContainer";
+import Form from "@/components/layouts/form/Form";
+import Footer from "@/components/layouts/foot/Foot";
 import Icon from "@/components/icons/Icon";
 import Head from "next/head";
+import Button from "@/components/common/button/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,5 +1,5 @@
-import Button from "../button/Button";
-import Icon from "../icons/Icon";
+import Button from "@/components/common/button/Button";
+import Icon from "../../icons/Icon";
 
 export default function Header() {
   const openInNewTab = (url: string) => {

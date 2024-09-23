@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Icon from "../icons/Icon";
+import Icon from "../../icons/Icon";
 
 export default function Slide() {
   const [isPaused, setIsPaused] = useState(false);

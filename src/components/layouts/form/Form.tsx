@@ -1,8 +1,8 @@
 import { FormEvent, useState } from "react";
 import { formValidade } from "@/services/validade";
 import { emailService } from "@/services/emailService";
-import Button from "../button/Button";
-import Input from "../input/Input";
+import Input from "../../common/input/Input";
+import Button from "@/components/common/button/Button";
 
 interface FormValidationError {
   name?: string;
