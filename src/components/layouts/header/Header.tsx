@@ -1,5 +1,6 @@
+import Icon from "@/components/icons/Icon";
+import styles from "./header.module.css";
 import Button from "@/components/common/button/Button";
-import Icon from "../../icons/Icon";
 
 export default function Header() {
   const openInNewTab = (url: string) => {
@@ -18,46 +19,40 @@ export default function Header() {
   };
 
   return (
-    <header
-      className="flex gap-10 flex-col justify-center items-center | h-96 | main-header"
-      id="header"
-    >
-      <div>
-        {/* TITLE CONTENT */}
-        <p>Hello world_</p>
-        <h2 className="text-5xl font-semibold max-w-80">Lucas Montenegro</h2>
-        <h3 className="font-thin">Desenvolvedor back-end</h3>
+    <header className={styles.header} id="header">
+      <Icon
+        name="star"
+        width={80}
+        className="absolute right-60 bottom-28 rotate-12"
+      />
+      <Icon
+        name="star"
+        width={30}
+        className="absolute right-28 top-28 rotate-45"
+      />
+      <Icon
+        name="shootingstar"
+        width={80}
+        className="absolute left-28 top-14"
+      />
+      <Icon name="light" width={38} className="absolute left-80 bottom-32" />
 
-        {/* CONTAINER BUTTONS */}
-        <div className="flex justify-between mt-3">
-          <div className="flex gap-3">
-            <Button
-              onClick={() => openInNewTab("https://github.com/lukinhas563")}
-            >
-              <Icon name="github" color="#fff" width={20} />
-            </Button>
-            <Button
-              onClick={() =>
-                openInNewTab("https://linkedin.com/in/lucasmontenegro")
-              }
-            >
-              <Icon name="linkedin" color="#fff" width={20} />
-            </Button>
+      <div className={styles.wrapper}>
+        <h2 className={styles.title}>
+          Experiências digitais incríveis começam com um backend sólido.
+        </h2>
+        <h3 className={styles.subtitle}>
+          Contrate um desenvolvedor back-end profissional.
+        </h3>
+
+        <div className={styles.action}>
+          <div className={styles.links}>
+            <Icon name="github" width={30} />
+            <Icon name="linkedin" width={30} />
           </div>
-
-          <Button onClick={() => downloadPdf()}>
-            <Icon name="download" color="#fff" /> Download CV
-          </Button>
+          <Button>BAIXAR</Button>
         </div>
       </div>
-
-      {/* DESCRIPTION CONTENT */}
-      <p className="max-w-[40rem] text-center">
-        Empolgado com a tecnologia e sua capacidade de transformar experiências
-        digitais, sou um profissional em Desenvolvimento <b>Back-end</b>.
-        Comprometido com a excelência, possuo habilidade em <b>C#</b>,{" "}
-        <b>Typescript</b>, <b>Java</b> e outras tecnologias relevantes.
-      </p>
     </header>
   );
 }

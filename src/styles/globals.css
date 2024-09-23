@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 :root {
+  --main-color: #fff;
+  --second-color: #7353ce;
+  --thirtd-color: #e481db;
+
   --background-color: #161616;
 
   --font-color: #ffffff;
@@ -20,6 +24,8 @@ html {
 
 body {
   color: var(--font-color);
+
+  overflow-x: hidden;
 
   background-color: var(--background-color);
 }

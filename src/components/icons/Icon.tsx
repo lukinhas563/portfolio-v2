@@ -10,7 +10,7 @@ interface IconProps {
 export default function Icon({
   name,
   width = 20,
-  color = "",
+  color = "#fff",
   className,
 }: IconProps) {
   const Component = icons[name];

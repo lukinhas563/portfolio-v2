@@ -39,6 +39,9 @@ import IconSpring from "./IconSpring/IconSpring";
 import IconRabbitMQ from "./IconRabbitMQ/IconRabbitMQ";
 import IconAWS from "./IconAWS/IconAWS";
 import IconAzure from "./IconAzure/IconAzure";
+import IconStar from "./IconStar/IconStar";
+import IconShootingStar from "./IconShootingStart/IconShotingStar";
+import IconLight from "./IconLight/IconLight";
 
 export interface IconsProps {
   width?: number;
@@ -169,5 +172,14 @@ export const icons = {
   ),
   azure: ({ width, color, className }: IconsProps) => (
     <IconAzure width={width} color={color} className={className} />
+  ),
+  star: ({ width, color, className }: IconsProps) => (
+    <IconStar width={width} color={color} className={className} />
+  ),
+  shootingstar: ({ width, color, className }: IconsProps) => (
+    <IconShootingStar width={width} color={color} className={className} />
+  ),
+  light: ({ width, color, className }: IconsProps) => (
+    <IconLight width={width} color={color} className={className} />
   ),
 };
