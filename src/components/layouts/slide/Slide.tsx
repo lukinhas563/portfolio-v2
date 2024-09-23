@@ -1,7 +1,12 @@
 import { useState } from "react";
 import Icon from "../../icons/Icon";
+import styles from "./slide.module.css";
 
-export default function Slide() {
+interface SlideProps {
+  direction?: "left" | "right";
+}
+
+export default function Slide({ direction = "left" }: SlideProps) {
   const [isPaused, setIsPaused] = useState(false);
 
   const handleMouseEnter = () => {
@@ -12,89 +17,80 @@ export default function Slide() {
     setIsPaused(false);
   };
 
-  const className = "fill-[#333333] hover:fill-white min-w-[50px]";
+  const scroll =
+    direction === "left"
+      ? "animate-infinite-scroll"
+      : "animate-infinite-scroll-reverse";
   const width = 50;
+
+  const icons = [
+    "javascript",
+    "react",
+    "typescript",
+    "vue",
+    "next",
+    "html",
+    "css",
+    "node",
+    "docker",
+    "svelte",
+    "figma",
+    "postgresql",
+    "npm",
+    "mysql",
+    "firebase",
+    "mongodb",
+    "knex",
+    "tailwind",
+    "git",
+    "webpack",
+    "yarn",
+    "jest",
+    "csharp",
+    "java",
+    "dotnet",
+    "python",
+    "angular",
+    "spring",
+    "rabbitmq",
+    "aws",
+    "azure",
+  ];
 
   return (
     <div
-      className="bg-[#1A1A1A] border-y-2 border-[#3C3C3C] p-10 flex overflow-hidden gap-6"
       id="skills"
+      className={styles.skills}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className={`flex items-center gap-6 animate-infinite-scroll ${
+        className={`flex items-center gap-6 ${scroll} ${
           isPaused ? "paused" : ""
         }`}
       >
-        <Icon name="javascript" width={width} className={className} />
-        <Icon name="react" width={width} className={className} />
-        <Icon name="typescript" width={width} className={className} />
-        <Icon name="vue" width={width} className={className} />
-        <Icon name="next" width={width} className={className} />
-        <Icon name="html" width={width} className={className} />
-        <Icon name="css" width={width} className={className} />
-        <Icon name="node" width={width} className={className} />
-        <Icon name="docker" width={width} className={className} />
-        <Icon name="svelte" width={width} className={className} />
-        <Icon name="figma" width={width} className={className} />
-        <Icon name="postgresql" width={width} className={className} />
-        <Icon name="npm" width={width} className={className} />
-        <Icon name="mysql" width={width} className={className} />
-        <Icon name="firebase" width={width} className={className} />
-        <Icon name="mongodb" width={width} className={className} />
-        <Icon name="knex" width={width} className={className} />
-        <Icon name="tailwind" width={width} className={className} />
-        <Icon name="git" width={width} className={className} />
-        <Icon name="webpack" width={width} className={className} />
-        <Icon name="yarn" width={width} className={className} />
-        <Icon name="jest" width={width} className={className} />
-        <Icon name="csharp" width={width} className={className} />
-        <Icon name="java" width={width} className={className} />
-        <Icon name="dotnet" width={width} className={className} />
-        <Icon name="python" width={width} className={className} />
-        <Icon name="angular" width={width} className={className} />
-        <Icon name="spring" width={width} className={className} />
-        <Icon name="rabbitmq" width={width} className={className} />
-        <Icon name="aws" width={width} className={className} />
-        <Icon name="azure" width={width} className={className} />
+        {icons.map((icon, index) => (
+          <Icon
+            key={index}
+            name={icon}
+            width={width}
+            className={styles.skill}
+          />
+        ))}
       </div>
       <div
-        className={`flex items-center gap-6 animate-infinite-scroll ${
+        className={`flex items-center gap-6 ${scroll} ${
           isPaused ? "paused" : ""
         }`}
       >
-        <Icon name="javascript" width={width} className={className} />
-        <Icon name="react" width={width} className={className} />
-        <Icon name="typescript" width={width} className={className} />
-        <Icon name="vue" width={width} className={className} />
-        <Icon name="next" width={width} className={className} />
-        <Icon name="html" width={width} className={className} />
-        <Icon name="css" width={width} className={className} />
-        <Icon name="node" width={width} className={className} />
-        <Icon name="docker" width={width} className={className} />
-        <Icon name="svelte" width={width} className={className} />
-        <Icon name="figma" width={width} className={className} />
-        <Icon name="postgresql" width={width} className={className} />
-        <Icon name="npm" width={width} className={className} />
-        <Icon name="mysql" width={width} className={className} />
-        <Icon name="firebase" width={width} className={className} />
-        <Icon name="mongodb" width={width} className={className} />
-        <Icon name="knex" width={width} className={className} />
-        <Icon name="tailwind" width={width} className={className} />
-        <Icon name="git" width={width} className={className} />
-        <Icon name="webpack" width={width} className={className} />
-        <Icon name="yarn" width={width} className={className} />
-        <Icon name="jest" width={width} className={className} />
-        <Icon name="csharp" width={width} className={className} />
-        <Icon name="java" width={width} className={className} />
-        <Icon name="dotnet" width={width} className={className} />
-        <Icon name="python" width={width} className={className} />
-        <Icon name="angular" width={width} className={className} />
-        <Icon name="spring" width={width} className={className} />
-        <Icon name="rabbitmq" width={width} className={className} />
-        <Icon name="aws" width={width} className={className} />
-        <Icon name="azure" width={width} className={className} />
+        {icons.map((icon, index) => (
+          <Icon
+            key={`dup-${index}`}
+            name={icon}
+            width={width}
+            className={styles.skill}
+          />
+        ))}
       </div>
     </div>
   );

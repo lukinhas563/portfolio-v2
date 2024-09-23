@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/layouts/header/Header";
 import Container from "@/components/common/container/Container";
 import Menu from "@/components/layouts/menu/Menu";
+import Slide from "@/components/layouts/slide/Slide";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,8 @@ export default function Home() {
       <Container>
         <Menu />
         <Header />
+        <Slide />
+        <Slide direction="right" />
       </Container>
     </>
   );

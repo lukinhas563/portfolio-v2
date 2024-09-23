@@ -5,6 +5,7 @@ export default function IconHtml({ width, className, color }: IconsProps) {
     <svg
       width={`${width}px`}
       height={`${width}px`}
+      fill={color}
       viewBox="-1 0 20 20"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,6 @@ export default function IconHtml({ width, className, color }: IconsProps) {
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-61.000000, -7639.000000)"
-          fill={color}
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

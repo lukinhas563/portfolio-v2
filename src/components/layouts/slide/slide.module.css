@@ -1,0 +1,12 @@
+.skills {
+  display: inline-flex;
+  gap: 10px;
+
+  .skill {
+    fill: #ffffff20;
+  }
+
+  .skill:hover {
+    fill: #fff;
+  }
+}
