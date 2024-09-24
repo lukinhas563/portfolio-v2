@@ -1,8 +1,18 @@
 import Icon from "@/components/icons/Icon";
-import styles from "./header.module.css";
 import Button from "@/components/common/button/Button";
+import { motion } from "framer-motion";
+import styles from "./header.module.css";
 
 export default function Header() {
+  const starVariants = (delay: number) => ({
+    initial: { scale: 0, opacity: 0 },
+    animate: {
+      scale: [1, 1.5, 1],
+      opacity: [0, 1, 0.8],
+      transition: { duration: 1.5, ease: "easeInOut", delay },
+    },
+  });
+
   const openInNewTab = (url: string) => {
     const newWindow = window.open(url, "_blank");
     if (newWindow) {
@@ -25,22 +35,41 @@ export default function Header() {
 
   return (
     <header className={styles.header} id="header">
-      <Icon
-        name="star"
-        width={80}
-        className="absolute right-60 bottom-28 rotate-12"
-      />
-      <Icon
-        name="star"
-        width={30}
-        className="absolute right-28 top-28 rotate-45"
-      />
-      <Icon
-        name="shootingstar"
-        width={80}
+      <motion.div
+        variants={starVariants(0)}
+        initial="initial"
+        animate="animate"
+        className="absolute right-60 bottom-28 "
+      >
+        <Icon name="star" width={80} className="rotate-12" />
+      </motion.div>
+
+      <motion.div
+        variants={starVariants(0.3)}
+        initial="initial"
+        animate="animate"
+        className="absolute right-28 top-28 "
+      >
+        <Icon name="star" width={30} className="rotate-45" />
+      </motion.div>
+
+      <motion.div
+        variants={starVariants(0.6)}
+        initial="initial"
+        animate="animate"
         className="absolute left-28 top-14"
-      />
-      <Icon name="light" width={38} className="absolute left-80 bottom-32" />
+      >
+        <Icon name="shootingstar" width={80} />
+      </motion.div>
+
+      <motion.div
+        variants={starVariants(0.9)}
+        initial="initial"
+        animate="animate"
+        className="absolute left-80 bottom-32"
+      >
+        <Icon name="light" width={38} />
+      </motion.div>
 
       <div className={styles.wrapper}>
         <h2 className={styles.title}>

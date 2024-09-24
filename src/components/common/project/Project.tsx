@@ -1,7 +1,8 @@
 import { icons } from "@/components/icons/icons";
 import Icon from "@/components/icons/Icon";
-import styles from "./project.module.css";
 import Image from "next/image";
+import { animate, motion } from "framer-motion";
+import styles from "./project.module.css";
 
 interface ProjectProps {
   title: string;
@@ -16,6 +17,20 @@ export default function Project({
   frameworks,
   link,
 }: ProjectProps) {
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   const openInNewTab = (url: string) => {
     const newWindow = window.open(url, "_blank");
     if (newWindow) {
@@ -24,7 +39,15 @@ export default function Project({
   };
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      className={styles.container}
+    >
       <Image
         src={"/images/grid.png"}
         width={340}
@@ -47,6 +70,6 @@ export default function Project({
           Veja mais <Icon name="halfarrowup" />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
