@@ -1,5 +1,5 @@
 import { object, string, InferType, ValidationError } from "yup";
-import { IValidateService } from "./IValidateService";
+import { IValidateService, ValidateErrorResult } from "./IValidateService";
 
 let formSchema = object({
   name: string().min(3).required(),
@@ -7,12 +7,12 @@ let formSchema = object({
   message: string().min(6).max(500).required(),
 });
 
-type FormValidadeProps = InferType<typeof formSchema>;
+type FormValidateProps = InferType<typeof formSchema>;
 
 export class ValidateService implements IValidateService {
   constructor() {}
 
-  async validate({ name, email, message }: FormValidadeProps) {
+  async validate({ name, email, message }: FormValidateProps) {
     try {
       const result = await formSchema.validate(
         { name, email, message },
@@ -30,7 +30,7 @@ export class ValidateService implements IValidateService {
         validateErrors[error.path] = error.message;
       });
 
-      return { result: false, content: validateErrors };
+      throw new ValidateErrorResult(validateErrors);
     }
   }
 }

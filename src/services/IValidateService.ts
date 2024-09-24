@@ -1,14 +1,18 @@
-export type ValidadeSuccessResult = {
+export type ValidateSuccessResult = {
   result: boolean;
   content: object;
 };
 
-export type ValidadeErrorResult = {
-  result: boolean;
-  content: Record<string, string>;
-};
+export class ValidateErrorResult extends Error {
+  public content: Record<string, string>;
 
-export type FormValidadeProps = {
+  constructor(content: Record<string, string>) {
+    super("Validation Error");
+    this.content = content;
+  }
+}
+
+export type FormValidateProps = {
   name: string;
   email: string;
   message: string;
@@ -16,6 +20,6 @@ export type FormValidadeProps = {
 
 export interface IValidateService {
   validate(
-    props: FormValidadeProps
-  ): Promise<ValidadeSuccessResult | ValidadeErrorResult>;
+    props: FormValidateProps
+  ): Promise<ValidateSuccessResult | ValidateErrorResult>;
 }

@@ -10,7 +10,7 @@ import Projects from "@/components/layouts/projects/Projects";
 import Contact from "@/components/layouts/contact/Contact";
 import Footer from "@/components/layouts/footer/Footer";
 import { ValidateService } from "@/services/ValidateService";
-import { EmailService, EmailTemplate } from "@/services/EmailService";
+import { EmailService, EmailTemplate } from "../services/EmailService";
 
 const inter = Inter({ subsets: ["latin"] });
 
