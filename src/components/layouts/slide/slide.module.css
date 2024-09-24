@@ -2,6 +2,10 @@
   display: inline-flex;
   gap: 10px;
 
+  width: 100%;
+
+  overflow-x: hidden;
+
   .skill {
     fill: #ffffff20;
   }

@@ -58,4 +58,32 @@ body {
   .main-header {
     margin: 50px 0;
   }
+
+  .light-element-1 {
+    width: 20rem;
+    height: 20rem;
+    left: -10rem;
+    top: -10rem;
+  }
+
+  .light-element-2 {
+    width: 15rem;
+    height: 15rem;
+    left: -5rem;
+    top: 10rem;
+  }
+
+  .light-element-3 {
+    width: 18rem;
+    height: 18rem;
+    left: 5rem;
+    top: -5rem;
+  }
+
+  .light-element-4 {
+    width: 20rem;
+    height: 20rem;
+    right: 10rem;
+    bottom: -15rem;
+  }
 }

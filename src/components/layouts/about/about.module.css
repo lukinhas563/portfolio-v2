@@ -34,7 +34,7 @@
   }
 
   .content {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .name {
@@ -66,5 +66,40 @@
     transform: rotate(180deg);
 
     pointer-events: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .title {
+      font-size: 35px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+    }
+
+    .content {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    align-items: center;
+    padding: 3rem 3rem;
+    height: 100%;
+
+    .title {
+      text-align: center;
+      height: 100%;
+    }
+
+    .subtitle {
+      text-align: center;
+    }
+
+    .content {
+      text-align: center;
+    }
   }
 }

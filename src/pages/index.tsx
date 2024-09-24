@@ -10,7 +10,7 @@ import Projects from "@/components/layouts/projects/Projects";
 import Contact from "@/components/layouts/contact/Contact";
 import Footer from "@/components/layouts/footer/Footer";
 import { ValidateService } from "@/services/ValidateService";
-import { EmailService, EmailTemplate } from "../services/EmailService";
+import { EmailService, EmailTemplate } from "@/services/EmailService";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,17 +39,19 @@ export default function Home() {
 
   return (
     <>
-      <div className="absolute bg-[#2D235C] h-[50rem] w-[50rem] left-[-20rem] top-[-20rem] rounded-full blur-3xl" />
-      <div className="absolute bg-[#fff5b636] h-[20rem] w-[20rem] left-[-10rem] top-[20rem] rounded-full blur-3xl" />
-      <div className="absolute bg-[#3c2d76] h-[25rem] w-[25rem] left-[20rem] top-[-10rem] rounded-full blur-3xl" />
+      <div className="light-element-1 absolute bg-[#2D235C] h-[50rem] w-[50rem] left-[-20rem] top-[-20rem] rounded-full blur-3xl" />
+      <div className="light-element-2 absolute bg-[#fff5b636] h-[20rem] w-[20rem] left-[-10rem] top-[20rem] rounded-full blur-3xl" />
+      <div className="light-element-3 absolute bg-[#3c2d76] h-[25rem] w-[25rem] left-[20rem] top-[-10rem] rounded-full blur-3xl" />
 
-      <div className="absolute bg-[#2D235C] h-[50rem] w-[50rem] right-[-20rem] bottom-[-30rem] rounded-full blur-3xl" />
+      <div className="light-element-4 absolute bg-[#2D235C] h-[50rem] w-[50rem] right-[-20rem] bottom-[-30rem] rounded-full blur-3xl" />
 
       <Container>
         <Menu />
         <Header />
-        <Slide />
-        <Slide direction="right" />
+      </Container>
+      <Slide />
+      <Slide direction="right" />
+      <Container>
         <About />
         <Projects />
         <Contact

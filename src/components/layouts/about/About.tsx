@@ -13,7 +13,7 @@ export default function About() {
           </h3>
         </div>
 
-        <p>
+        <p className={styles.content}>
           Apaixonado por tecnologia e otimização de sistemas, sou um
           profissional especializado em <b>Desenvolvimento Back-end</b>. Com
           experiência em <b>C#</b>, <b>ASP.NET</b>, <b>Python</b>,{" "}

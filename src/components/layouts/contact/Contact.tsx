@@ -25,7 +25,7 @@ export default function Contact({
 
   return (
     <section className={styles.container} id="contact">
-      <div className="absolute bg-[#2D235C] h-[30rem] w-[30rem] left-[-20rem] top-[-5rem] rounded-full blur-3xl z-0" />
+      <div className="absolute bg-[#2D235C] h-[30rem] w-[30rem] left-[-20rem] top-[-5rem] rounded-full blur-3xl z-[-1]" />
 
       <motion.div
         variants={starVariants(0.3)}
@@ -34,7 +34,7 @@ export default function Contact({
         viewport={{
           once: true,
         }}
-        className="absolute top-[100px] left-[3px]"
+        className={styles.star}
       >
         <Icon name="light" className="rotate-12 z-1" />
       </motion.div>

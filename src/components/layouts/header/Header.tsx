@@ -39,36 +39,36 @@ export default function Header() {
         variants={starVariants(0)}
         initial="initial"
         animate="animate"
-        className="absolute right-60 bottom-28 "
+        className={styles.starOne}
       >
-        <Icon name="star" width={80} className="rotate-12" />
+        <Icon name="star" width={50} className="rotate-12" />
       </motion.div>
 
       <motion.div
         variants={starVariants(0.3)}
         initial="initial"
         animate="animate"
-        className="absolute right-28 top-28 "
+        className={styles.starTwo}
       >
-        <Icon name="star" width={30} className="rotate-45" />
+        <Icon name="star" width={25} className="rotate-45" />
       </motion.div>
 
       <motion.div
         variants={starVariants(0.6)}
         initial="initial"
         animate="animate"
-        className="absolute left-28 top-14"
+        className={styles.starThree}
       >
-        <Icon name="shootingstar" width={80} />
+        <Icon name="shootingstar" width={50} />
       </motion.div>
 
       <motion.div
         variants={starVariants(0.9)}
         initial="initial"
         animate="animate"
-        className="absolute left-80 bottom-32"
+        className={styles.starFour}
       >
-        <Icon name="light" width={38} />
+        <Icon name="light" width={25} />
       </motion.div>
 
       <div className={styles.wrapper}>

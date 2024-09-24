@@ -4,7 +4,7 @@ import styles from "./menu.module.css";
 export default function Menu() {
   return (
     <nav className={styles.menu} id="menu">
-      <Logo />
+      <Logo className={styles.logomenu} />
 
       <ul className={styles.options}>
         <li>
