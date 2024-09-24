@@ -47,6 +47,8 @@
 
     gap: 5px;
 
+    z-index: 1;
+
     .button {
       display: flex;
 
@@ -58,6 +60,8 @@
     position: absolute;
     top: -10rem;
     left: 15rem;
+
+    z-index: 0;
   }
 
   .flower2 {
@@ -66,5 +70,7 @@
     right: 15rem;
 
     transform: rotate(180deg);
+
+    z-index: 0;
   }
 }

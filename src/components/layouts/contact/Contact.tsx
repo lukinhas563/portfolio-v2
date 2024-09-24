@@ -1,14 +1,24 @@
 import Icon from "@/components/icons/Icon";
 import styles from "./contact.module.css";
 import Email from "@/components/common/email/Email";
+import IEmailService from "@/services/IEmailService";
+import { IValidateService } from "@/services/IValidateService";
 
-export default function Contact() {
+interface ContactProps {
+  emailService: IEmailService;
+  validateService: IValidateService;
+}
+
+export default function Contact({
+  emailService,
+  validateService,
+}: ContactProps) {
   return (
     <section className={styles.container} id="contact">
-      <div className="absolute bg-[#2D235C] h-[50rem] w-[50rem] left-[-30rem] top-[-20rem] rounded-full blur-3xl" />
+      <div className="absolute bg-[#2D235C] h-[30rem] w-[30rem] left-[-20rem] top-[-5rem] rounded-full blur-3xl z-0" />
       <Icon
         name="light"
-        className="absolute top-[100px] left-[3px] rotate-12"
+        className="absolute top-[100px] left-[3px] rotate-12 z-0"
       />
 
       <div className={styles.info}>
@@ -34,7 +44,7 @@ export default function Contact() {
         </ul>
       </div>
 
-      <Email />
+      <Email emailService={emailService} validateService={validateService} />
     </section>
   );
 }

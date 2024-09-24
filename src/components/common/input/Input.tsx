@@ -27,7 +27,7 @@ export default function Input({
   if (type === "textarea") {
     return (
       <textarea
-        className={`${className} w-full h-40 p-3 rounded bg-white border border-[#3C3C3C]`}
+        className={`${className} w-full h-40 p-3 rounded bg-white border border-[#3C3C3C] text-black`}
         name={name}
         placeholder={placeholder}
         value={value}
@@ -37,7 +37,7 @@ export default function Input({
   } else {
     return (
       <input
-        className={`${className} w-full p-3 rounded bg-white border border-[#3C3C3C]`}
+        className={`${className} w-full p-3 rounded bg-white border border-[#3C3C3C] text-black`}
         type={type}
         name={name}
         placeholder={placeholder}

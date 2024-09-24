@@ -22,7 +22,7 @@ export default function Projects() {
         <Project
           title="PORTFOLIO FRONT-END"
           description="Portfolio desenvolvida em Next e Typescript permitindo alta-perfomace."
-          frameworks={["typescript", "css", "next"]}
+          frameworks={["typescript", "css", "tailwind", "next"]}
           link="https://github.com/lukinhas563/portfolio-v2"
         />
         <Project
@@ -40,14 +40,14 @@ export default function Projects() {
         <Project
           title="NOTAS FISCAIS"
           description="Calculadora de notas fiscais eletrônicas desenvolvida em React com conceitos do SOLID."
-          frameworks={["javascript", "css", "react"]}
+          frameworks={["typescript", "css", "tailwind", "react"]}
           link="https://github.com/lukinhas563/xmlcalc2"
         />
         <Project
           title="LANDING PAGE"
           description="Landing Page utlizando apenas HTML e CSS. Foi desenvolvida com o objetivo de entender os fundamentos básicos."
-          frameworks={["javascript", "html", "css"]}
-          link="https://lucasmontenegro.vercel.app"
+          frameworks={["html", "css"]}
+          link="https://github.com/lukinhas563/basic-landing-page"
         />
       </div>
     </section>

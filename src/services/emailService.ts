@@ -1,30 +1,29 @@
 import emailjs from "@emailjs/browser";
+import IEmailService, { EmailParams } from "./IEmailService";
 
-export const emailService = async (
-  name: string,
-  lastName: string,
-  email: string,
-  company: string,
-  message: string
-) => {
-  const templateParams = {
-    from_name: name,
-    from_lastname: lastName,
-    from_email: email,
-    from_company: company,
-    message: message,
-  };
+export interface EmailTemplate {
+  servideID: string;
+  templateID: string;
+  publicKey: string;
+}
 
-  try {
-    await emailjs.send(
-      "service_zp1xhny",
-      "template_xbqnznw",
-      templateParams,
-      "mgaqTfNRE2UGAteAD"
-    );
+export class EmailService implements IEmailService {
+  constructor(private emailTemplate: EmailTemplate) {}
 
-    return { result: true };
-  } catch (err) {
-    return { result: false };
+  async send(params: EmailParams): Promise<{ result: boolean }> {
+    try {
+      await emailjs.send(
+        this.emailTemplate.servideID,
+        this.emailTemplate.templateID,
+        params,
+        this.emailTemplate.publicKey
+      );
+
+      return { result: true };
+    } catch (error) {
+      console.error(error);
+
+      return { result: false };
+    }
   }
-};
+}

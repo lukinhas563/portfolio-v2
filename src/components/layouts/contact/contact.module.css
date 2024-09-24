@@ -10,8 +10,6 @@
 
   height: 100vh;
 
-  z-index: -1;
-
   .info {
     z-index: 1;
 
