@@ -13,6 +13,7 @@ export default function IconPython({ className, color, width }: IconsProps) {
       viewBox="0 0 512 512"
       enableBackground="new 0 0 512 512"
       xmlSpace="preserve"
+      role="img"
     >
       <title>Python</title>
       <desc>Icode de habilidade em Python</desc>

@@ -9,6 +9,7 @@ export default function IconCSharp({ className, color, width }: IconsProps) {
       height={`${width}px`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 50 50"
+      role="img"
     >
       <title>CSharp</title>
       <desc>Icode de habilidade em CSharp</desc>

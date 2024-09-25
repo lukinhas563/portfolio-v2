@@ -84,6 +84,7 @@ export default function Email({
         <Input
           type="text"
           placeholder="Seu nome"
+          name="name"
           value={name}
           setValue={setName}
           className={errors.name ? styles.inputError : ""}
@@ -91,6 +92,7 @@ export default function Email({
         <Input
           type="email"
           placeholder="Seu e-mail"
+          name="email"
           value={email}
           setValue={setEmail}
           className={errors.email ? styles.inputError : ""}
@@ -98,6 +100,7 @@ export default function Email({
         <Input
           type="textarea"
           placeholder="Sua mensagem"
+          name="message"
           value={message}
           setValue={setMessage}
           className={errors.message ? styles.inputError : ""}

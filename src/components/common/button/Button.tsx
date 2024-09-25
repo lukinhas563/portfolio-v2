@@ -15,7 +15,11 @@ export default function Button({
 }: ButtonProps) {
   return (
     <div className={styles.wrapper}>
-      <button type={type} onClick={onClick} className={styles.button}>
+      <button
+        type={type}
+        onClick={onClick}
+        className={`${styles.button} ${className}`}
+      >
         {children}
       </button>
     </div>

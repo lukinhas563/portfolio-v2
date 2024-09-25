@@ -24,7 +24,7 @@ export default function Contact({
   });
 
   return (
-    <section className={styles.container} id="contact">
+    <section role="contentinfo" className={styles.container} id="contact">
       <div className="absolute bg-[#2D235C] h-[30rem] w-[30rem] left-[-20rem] top-[-5rem] rounded-full blur-3xl z-[-1]" />
 
       <motion.div

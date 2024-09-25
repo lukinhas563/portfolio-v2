@@ -1,4 +1,3 @@
-import IconDownload from "./IconDownload/IconDownload";
 import IconEmail from "./IconEmail/IconEmail";
 import IconGithub from "./IconGithub/IconGithub";
 import IconHtml from "./IconHtml/IconHtml";
@@ -24,12 +23,6 @@ import IconGit from "./IconGit/IconGit";
 import IconWebpack from "./IconWebpack/IconWebpack";
 import IconYarn from "./IconYarn/IconYarn";
 import IconJest from "./IconJest/IconJest";
-import IconArrowUpRight from "./IconArrowUpRight/IconArrowUpRight";
-import IconServer from "./IconServer/IconServer";
-import IconComputer from "./IconComputer/IconComputer";
-import IconArrowRight from "./IconArrowRight/IconArrowRight";
-import IconArrowLeft from "./IconArrowLeft/IconArrowLeft";
-import IconArrowUp from "./IconArrowUp/IconArrowUp";
 import IconCSharp from "./IconCSharp/IconCSharp";
 import IconJava from "./IconJava/IconJava";
 import IconDotNet from "./IconDotNet/IconDotNet";
@@ -56,9 +49,6 @@ export const icons = {
   ),
   linkedin: ({ width, color, className }: IconsProps) => (
     <IconLinkedin width={width} color={color} className={className} />
-  ),
-  download: ({ width, color, className }: IconsProps) => (
-    <IconDownload color={color} width={width} className={className} />
   ),
   email: ({ width, color, className }: IconsProps) => (
     <IconEmail className={className} color={color} width={width} />
@@ -128,24 +118,6 @@ export const icons = {
   ),
   jest: ({ width, color, className }: IconsProps) => (
     <IconJest width={width} color={color} className={className} />
-  ),
-  arrowupright: ({ width, color, className }: IconsProps) => (
-    <IconArrowUpRight width={width} color={color} className={className} />
-  ),
-  server: ({ width, color, className }: IconsProps) => (
-    <IconServer width={width} color={color} className={className} />
-  ),
-  computer: ({ width, color, className }: IconsProps) => (
-    <IconComputer width={width} color={color} className={className} />
-  ),
-  arrowright: ({ width, color, className }: IconsProps) => (
-    <IconArrowRight width={width} color={color} className={className} />
-  ),
-  arrowleft: ({ width, color, className }: IconsProps) => (
-    <IconArrowLeft width={width} color={color} className={className} />
-  ),
-  arrowup: ({ width, color, className }: IconsProps) => (
-    <IconArrowUp width={width} color={color} className={className} />
   ),
   csharp: ({ width, color, className }: IconsProps) => (
     <IconCSharp width={width} color={color} className={className} />

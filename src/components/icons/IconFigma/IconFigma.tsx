@@ -9,6 +9,7 @@ export default function IconFigma({ className, color, width }: IconsProps) {
       viewBox="0 0 24 24"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>Figma</title>
       <desc>Icode de habilidade em Figma</desc>

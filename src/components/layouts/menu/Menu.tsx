@@ -12,16 +12,19 @@ export default function Menu() {
             Inicio
           </a>
         </li>
+        <div className={styles.verticalLine} />
         <li>
           <a className={styles.option} href="#about">
             Sobre
           </a>
         </li>
+        <div className={styles.verticalLine} />
         <li>
           <a className={styles.option} href="#projects">
             Projetos
           </a>
         </li>
+        <div className={styles.verticalLine} />
         <li>
           <a className={styles.option} href="#contact">
             Contato

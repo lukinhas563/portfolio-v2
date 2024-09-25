@@ -13,6 +13,7 @@ export default function IconJava({ width, className, color }: IconsProps) {
       viewBox="0 0 512 512"
       enableBackground="new 0 0 512 512"
       xmlSpace="preserve"
+      role="img"
     >
       <title>java</title>
       <desc>Icode de habilidade em Java</desc>

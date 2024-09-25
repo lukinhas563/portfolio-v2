@@ -9,6 +9,7 @@ export default function IconEmail({ width, color, className }: IconsProps) {
       fill={color}
       className={className}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>E-mail</title>
       <desc>Icone de e-mail</desc>

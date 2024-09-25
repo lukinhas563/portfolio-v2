@@ -3,10 +3,10 @@ import styles from "./projects.module.css";
 
 export default function Projects() {
   return (
-    <section className={styles.container} id="projects">
+    <section role="contentinfo" className={styles.container} id="projects">
       <h2 className={styles.title}>PROJETOS RECENTES</h2>
 
-      <div className={styles.grid}>
+      <div role="grid" className={styles.grid}>
         <Project
           title="MICRO SERVIÇOS HQ"
           description="Back-end C# em arquitetura de micro-serviços com Docker compose e PostgreSQL."

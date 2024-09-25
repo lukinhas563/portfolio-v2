@@ -66,6 +66,7 @@ export default function Slide({ direction = "left" }: SlideProps) {
       onMouseLeave={handleMouseLeave}
     >
       <div
+        role="listitem"
         className={`flex items-center gap-6 ${scroll} ${
           isPaused ? "paused" : ""
         }`}

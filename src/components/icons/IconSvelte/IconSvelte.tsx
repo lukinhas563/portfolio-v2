@@ -9,6 +9,7 @@ export default function IconSvelte({ className, color, width }: IconsProps) {
       viewBox="0 0 16 16"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>Svelte</title>
       <desc>Icode de habilidade em Svelte</desc>

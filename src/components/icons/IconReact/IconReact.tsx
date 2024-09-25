@@ -1,6 +1,6 @@
 import { IconsProps } from "../icons";
 
-export default function IconReact({ className, width }: IconsProps) {
+export default function IconReact({ className, width, color }: IconsProps) {
   return (
     <svg
       className={className}
@@ -8,6 +8,8 @@ export default function IconReact({ className, width }: IconsProps) {
       height={`${width}px`}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      fill={color}
     >
       <title>React</title>
       <desc>Icode de habilidade em React</desc>

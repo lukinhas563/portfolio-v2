@@ -11,6 +11,7 @@ export default function IconCss({ className, color, width }: IconsProps) {
       height={`${width}px`}
       viewBox="0 0 512 512"
       enableBackground="new 0 0 512 512"
+      role="img"
     >
       <title>CSS</title>
       <desc>Icode de habilidade em CSS</desc>

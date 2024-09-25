@@ -3,10 +3,10 @@ import styles from "./about.module.css";
 
 export default function About() {
   return (
-    <section className={styles.section} id="about">
+    <section role="contentinfo" className={styles.section} id="about">
       <div className={styles.container}>
         <div>
-          <h2 className={styles.title}>Sobre mim </h2>
+          <h2 className={styles.title}>Sobre mim</h2>
           <h3 className={styles.subtitle}>
             Meu nome é <span className={styles.name}>Lucas Montenegro</span>,
             desenvolvedor Back-end.
@@ -34,7 +34,7 @@ export default function About() {
           src={"/images/flower.png"}
           width={500}
           height={500}
-          alt="a picture of a abstract flower"
+          alt="a picture of a abstract flower2"
           className={styles.flower2}
         />
       </div>

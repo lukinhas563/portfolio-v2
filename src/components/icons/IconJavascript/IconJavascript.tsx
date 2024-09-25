@@ -7,27 +7,22 @@ export default function IconJavascript({
 }: IconsProps) {
   return (
     <svg
+      className={className}
       width={`${width}px`}
       height={`${width}px`}
+      fill={color}
       viewBox="0 0 20 20"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>Javascript</title>
       <desc>Icode de habilidade em JavaScript</desc>
       <defs></defs>
-      <g
-        id="Page-1"
-        stroke="none"
-        strokeWidth="1"
-        fill="none"
-        fillRule="evenodd"
-      >
+      <g id="Page-1" stroke="none" strokeWidth="1" fillRule="evenodd">
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-420.000000, -7479.000000)"
-          fill={color}
-          className={className}
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

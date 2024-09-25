@@ -9,6 +9,7 @@ export default function IconNpm({ className, color, width }: IconsProps) {
       viewBox="0 0 16 16"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>NPM</title>
       <desc>Icode de habilidade em NPM</desc>

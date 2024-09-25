@@ -13,6 +13,7 @@ export default function IconPostgresql({
       height={`${width}px`}
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>PostgreSQL</title>
       <desc>Icode de habilidade em PostgreSQL</desc>

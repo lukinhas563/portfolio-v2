@@ -9,6 +9,7 @@ export default function IconYarn({ className, color, width }: IconsProps) {
       fill={color}
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>Yarn</title>
       <desc>Icode de habilidade em Yarn</desc>

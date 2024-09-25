@@ -11,6 +11,7 @@ export default function IconKnex({ className, color, width }: IconsProps) {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
+      role="img"
     >
       <title>Knex</title>
       <desc>Icode de habilidade em Knex</desc>

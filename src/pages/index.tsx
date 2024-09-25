@@ -12,7 +12,7 @@ import Footer from "@/components/layouts/footer/Footer";
 import { ValidateService } from "@/services/ValidateService";
 import { EmailService, EmailTemplate } from "@/services/EmailService";
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   if (!process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID) {

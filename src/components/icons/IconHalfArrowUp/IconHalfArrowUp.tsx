@@ -13,7 +13,10 @@ export default function IconHalfArrowUp({
       viewBox="0 0 14 15"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
+      <title>Meia Seta para cima</title>
+      <desc>Icone de meia seta para cima</desc>
       <g clipPath="url(#clip0_151_156)">
         <path
           fillRule="evenodd"

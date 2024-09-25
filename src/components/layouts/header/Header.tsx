@@ -71,7 +71,7 @@ export default function Header() {
         <Icon name="light" width={25} />
       </motion.div>
 
-      <div className={styles.wrapper}>
+      <div role="separator" className={styles.wrapper}>
         <h2 className={styles.title}>
           Experiências digitais incríveis começam com um backend sólido.
         </h2>
@@ -79,7 +79,7 @@ export default function Header() {
           Contrate um desenvolvedor back-end profissional.
         </h3>
 
-        <div className={styles.action}>
+        <div role="listitem" className={styles.action}>
           <div className={styles.links}>
             <button onClick={() => openInNewTab(socials.gitHub)}>
               <Icon name="github" width={30} />

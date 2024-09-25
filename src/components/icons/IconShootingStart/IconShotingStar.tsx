@@ -11,8 +11,9 @@ export default function IconShootingStar({
       height={width}
       className={className}
       viewBox="0 0 80 80"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
     >
       <title>Estrela Cadente</title>
       <desc>Icode de Estrela Cadente</desc>
