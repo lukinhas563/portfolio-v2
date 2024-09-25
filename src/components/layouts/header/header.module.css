@@ -8,94 +8,94 @@
   height: 80vh;
 
   position: relative;
+}
 
+.starOne {
+  position: absolute;
+  right: 240px;
+  bottom: 112px;
+}
+.starTwo {
+  position: absolute;
+  right: 112px;
+  top: 112px;
+}
+.starThree {
+  position: absolute;
+  left: 7rem;
+  top: 3.5rem;
+}
+.starFour {
+  position: absolute;
+  left: 20rem;
+  bottom: 8rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  max-width: 880px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--main-color);
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+
+  color: var(--main-color);
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
   .starOne {
-    position: absolute;
-    right: 240px;
-    bottom: 112px;
+    right: 10px;
+    bottom: 50px;
   }
   .starTwo {
-    position: absolute;
-    right: 112px;
-    top: 112px;
+    right: 20px;
+    top: 50px;
   }
   .starThree {
-    position: absolute;
-    left: 7rem;
-    top: 3.5rem;
+    left: 5px;
+    top: 2rem;
   }
   .starFour {
-    position: absolute;
-    left: 20rem;
-    bottom: 8rem;
+    left: 1rem;
+    bottom: 7rem;
   }
+}
 
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    max-width: 880px;
-  }
-
+@media only screen and (max-width: 750px) {
   .title {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-
-    color: var(--main-color);
-  }
-
-  .subtitle {
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: center;
-
-    color: var(--main-color);
-  }
-
-  .action {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 50px;
-    gap: 20px;
-
-    .links {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      gap: 10px;
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
-    .starOne {
-      right: 10px;
-      bottom: 50px;
-    }
-    .starTwo {
-      right: 20px;
-      top: 50px;
-    }
-    .starThree {
-      left: 5px;
-      top: 2rem;
-    }
-    .starFour {
-      left: 1rem;
-      bottom: 7rem;
-    }
-  }
-
-  @media only screen and (max-width: 750px) {
-    .title {
-      font-size: 25px;
-    }
+    font-size: 25px;
   }
 }
