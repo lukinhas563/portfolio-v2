@@ -27,13 +27,11 @@ export default function Home() {
     throw new Error("NEXT_PUBLIC_EMAIL_PUBLIC_KEY is not defined");
   }
 
-  const emailTemplate: EmailTemplate = {
-    serviceID: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-    templateID: process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-    publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
-  };
+  const serviceID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
+  const templateID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
 
-  const emailService = new EmailService(emailTemplate);
+  const emailService = new EmailService({ serviceID, templateID, publicKey });
 
   const validateService = new ValidateService();
 

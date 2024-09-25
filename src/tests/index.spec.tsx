@@ -1,6 +1,6 @@
 import { test, expect, describe, vi, afterEach, beforeAll } from "vitest";
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
-import Home from ".";
+import Home from "@/pages";
 
 vi.mock("@/services/EmailService", () => ({
   EmailService: vi.fn(),
