@@ -28,7 +28,7 @@ export default function Home() {
   }
 
   const emailTemplate: EmailTemplate = {
-    servideID: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+    serviceID: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
     templateID: process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
     publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
   };

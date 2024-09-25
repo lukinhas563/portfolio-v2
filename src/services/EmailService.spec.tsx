@@ -22,7 +22,7 @@ describe("EmailService", () => {
   let emailService: IEmailService;
 
   const emailTemplate: EmailTemplate = {
-    servideID: "service_id",
+    serviceID: "service_id",
     templateID: "template_id",
     publicKey: "public_key",
   };
@@ -50,7 +50,7 @@ describe("EmailService", () => {
 
     // Assert
     expect(emailjs.send).toHaveBeenCalledWith(
-      emailTemplate.servideID,
+      emailTemplate.serviceID,
       emailTemplate.templateID,
       params,
       emailTemplate.publicKey
@@ -75,7 +75,7 @@ describe("EmailService", () => {
 
     // Assert
     expect(emailjs.send).toHaveBeenCalledWith(
-      emailTemplate.servideID,
+      emailTemplate.serviceID,
       emailTemplate.templateID,
       params,
       emailTemplate.publicKey
