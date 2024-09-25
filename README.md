@@ -21,13 +21,13 @@ Siga os passos abaixo para rodar o projeto localmente:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/portfolio-interface.git
+git clone https://github.com/seu-usuario/portfolio-v2.git
 ```
 
 2. Navegue até o diretório do projeto:
 
 ```bash
-cd portfolio-interface
+cd portfolio-v2
 ```
 
 3. Instale as dependências:
@@ -44,15 +44,25 @@ npm run dev
 
 O servidor é aberto na porta **3000**.
 
+5. Inicie os testes:
+
+```bash
+npm run test
+```
+
 ## 🛠️ Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- Next.js
-- Typescript
-- Tailwind
-- Yup
-- Eslint
+- [Next.js](https://nextjs.org/ "The React Framework for the Web")
+- [Typescript](https://www.typescriptlang.org/ "JavaScript With Syntax For Types")
+- [Tailwind](https://tailwindcss.com/ "Rapidly build modern websites without ever leaving your HTML")
+- [Yup](https://github.com/jquense/yup "JavaScript schema builder for value parsing and validation.")
+- [Eslint](https://eslint.org/ "Find and fix problems in your JavaScript code")
+- [Emailjs](https://www.emailjs.com/ "Send Email Directly From Your Code")
+- [Framer Motion](https://www.framer.com/motion/ "Complete documentation of the Framer Motion animation library")
+- [Vitest](https://vitest.dev/ "Next Generation Testing Framework")
+- [Testing Library](https://testing-library.com/ "Simple and complete testing utilities that encourage good testing practices")
 
 ## 🎉 Deploy
 
