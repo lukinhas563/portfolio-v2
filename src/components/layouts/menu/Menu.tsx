@@ -7,28 +7,17 @@ export default function Menu() {
       <Logo className={styles.logomenu} />
 
       <ul className={styles.options}>
-        <li>
-          <a className={styles.option} href="#header">
-            Inicio
-          </a>
+        <li className={styles.option}>
+          <a href="#header">Inicio</a>
         </li>
-        <div className={styles.verticalLine} />
-        <li>
-          <a className={styles.option} href="#about">
-            Sobre
-          </a>
+        <li className={styles.option}>
+          <a href="#about">Sobre</a>
         </li>
-        <div className={styles.verticalLine} />
-        <li>
-          <a className={styles.option} href="#projects">
-            Projetos
-          </a>
+        <li className={styles.option}>
+          <a href="#projects">Projetos</a>
         </li>
-        <div className={styles.verticalLine} />
-        <li>
-          <a className={styles.option} href="#contact">
-            Contato
-          </a>
+        <li className={styles.option}>
+          <a href="#contact">Contato</a>
         </li>
       </ul>
 

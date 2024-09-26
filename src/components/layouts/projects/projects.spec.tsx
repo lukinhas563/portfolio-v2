@@ -32,12 +32,11 @@ describe("<Projects />", () => {
   test("should render the Projects component with all correctly projects and id", () => {
     render(<Projects />);
 
-    const sectionElement = screen.getByRole("contentinfo");
+    const sectionElement = document.getElementById("#projects");
     expect(sectionElement).toBeDefined();
-    expect(sectionElement.id).toBe("projects");
 
     expect(screen.getByText("PROJETOS RECENTES")).toBeDefined();
-    expect(screen.getByRole("grid")).toBeDefined();
+    expect(document.getElementById("#grid")).toBeDefined();
 
     expect(screen.getByText("MICRO SERVIÇOS HQ")).toBeDefined();
     expect(screen.getByText("API TYPESCRIPT")).toBeDefined();

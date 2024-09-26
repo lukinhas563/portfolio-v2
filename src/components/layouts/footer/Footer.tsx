@@ -8,29 +8,18 @@ export default function Footer() {
     >
       <p>Criado com ♥️ por</p>
       <Logo />
-      <ul className="flex flex-row gap-4 mt-4 justify-center items-center">
-        <li>
-          <a href="#menu" className={styles.option}>
-            Inicio
-          </a>
+      <ul className="flex flex-row mt-4 justify-center items-center">
+        <li className={styles.option}>
+          <a href="#menu">Inicio</a>
         </li>
-        <div className={styles.verticalLine} />
-        <li>
-          <a href="#about" className={styles.option}>
-            Sobre
-          </a>
+        <li className={styles.option}>
+          <a href="#about">Sobre</a>
         </li>
-        <div className={styles.verticalLine} />
-        <li>
-          <a href="#projects" className={styles.option}>
-            Projetos
-          </a>
+        <li className={styles.option}>
+          <a href="#projects">Projetos</a>
         </li>
-        <div className={styles.verticalLine} />
-        <li>
-          <a href="#contact" className={styles.option}>
-            Contato
-          </a>
+        <li className={styles.option}>
+          <a href="#contact">Contato</a>
         </li>
       </ul>
     </footer>

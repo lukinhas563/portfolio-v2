@@ -11,6 +11,7 @@ import Contact from "@/components/layouts/contact/Contact";
 import Footer from "@/components/layouts/footer/Footer";
 import { ValidateService } from "@/services/ValidateService";
 import { EmailService, EmailTemplate } from "@/services/EmailService";
+import Head from "next/head";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,36 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Lucas Montenegro Alves | Desenvolvedor Back-end</title>
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Desenvolvedor back-end especializado em C# e ASP.NET. Confira meus projetos e entre em contato para discutir novas oportunidades."
+        />
+        <meta
+          name="keywords"
+          content="desenvolvedor back-end, C#, ASP.NET, APIs, Docker, Microserviços, PostgreSQL, RabbitMQ, Nodejs, Python"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.lucasmontenegro.vercel.app"
+        />
+        <meta
+          property="og:title"
+          content="Lucas Montenegro Alves | Desenvolvedor Back-end"
+        />
+        <meta
+          property="og:description"
+          content="Desenvolvedor especializado em soluções back-end com C# e ASP.NET. Veja meu portfólio de projetos e entre em contato."
+        />
+
+        <link rel="canonical" href="https://www.lucasmontenegro.vercel.app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
       <div className="light-element-1 absolute bg-[#2D235C] h-[50rem] w-[50rem] left-[-20rem] top-[-20rem] rounded-full blur-3xl" />
       <div className="light-element-2 absolute bg-[#fff5b636] h-[20rem] w-[20rem] left-[-10rem] top-[20rem] rounded-full blur-3xl" />
       <div className="light-element-3 absolute bg-[#3c2d76] h-[25rem] w-[25rem] left-[20rem] top-[-10rem] rounded-full blur-3xl" />

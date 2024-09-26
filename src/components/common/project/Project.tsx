@@ -39,7 +39,7 @@ export default function Project({
   };
 
   return (
-    <motion.div
+    <motion.article
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
@@ -52,7 +52,7 @@ export default function Project({
         src={"/images/grid.png"}
         width={340}
         height={340}
-        alt="a picture of a grid"
+        alt=""
         className={styles.grid}
       />
       <h3 className={styles.title}>{title.toUpperCase()}</h3>
@@ -70,6 +70,6 @@ export default function Project({
           Veja mais <Icon name="halfarrowup" />
         </button>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

@@ -14,21 +14,21 @@
     justify-content: center;
     align-items: center;
 
-    gap: 20px;
-
     .option {
       color: rgba(255, 230, 230, 0.3);
 
       transition: color ease-in-out 100ms;
+
+      padding: 0 2rem;
+      border-right: 1px solid rgba(255, 230, 230, 0.3);
     }
 
     .option:hover {
       color: white;
     }
 
-    .verticalLine {
-      border-left: 1px solid rgba(255, 230, 230, 0.3);
-      height: 20px;
+    .option:last-child {
+      border-right: none;
     }
   }
 
