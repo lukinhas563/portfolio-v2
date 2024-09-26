@@ -3,7 +3,9 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-col h-80 justify-center items-center">
+    <footer
+      className={`${styles.container} flex flex-col h-80 justify-center items-center`}
+    >
       <p>Criado com ♥️ por</p>
       <Logo />
       <ul className="flex flex-row gap-4 mt-4 justify-center items-center">

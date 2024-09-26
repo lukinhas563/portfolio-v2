@@ -1,3 +1,7 @@
+.container {
+  height: 50vh;
+}
+
 .option {
   color: rgba(255, 230, 230, 0.3);
 

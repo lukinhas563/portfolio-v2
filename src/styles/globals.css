@@ -42,7 +42,7 @@ body {
   animation-play-state: paused;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main-title {
     display: none;
   }
