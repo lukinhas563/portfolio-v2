@@ -49,6 +49,12 @@
   .menu {
     justify-content: center;
 
+    .options {
+      .option {
+        padding: 0 10px;
+      }
+    }
+
     .logomenu {
       display: none;
     }
